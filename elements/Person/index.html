@@ -287,6 +287,8 @@
 
       Person : primary_email
 
+      Person : test_int
+
       Person : vital_status
 
 
@@ -340,6 +342,12 @@
 <td><a href="../vital_status/">vital_status</a></td>
 <td>0..1 <br/> <a href="../PersonStatus/">PersonStatus</a></td>
 <td>living or dead status</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../test_int/">test_int</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td></td>
 <td>direct</td>
 </tr>
 <tr>
@@ -418,6 +426,7 @@ slots:
 - birth_date
 - age_in_years
 - vital_status
+- test_int
 slot_usage:
   primary_email:
     name: primary_email
@@ -479,6 +488,15 @@ attributes:
     domain_of:
     - Person
     range: PersonStatus
+  test_int:
+    name: test_int
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: test_int
+    owner: Person
+    domain_of:
+    - Person
+    range: integer
   id:
     name: id
     description: A unique identifier for a thing

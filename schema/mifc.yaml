@@ -399,6 +399,15 @@ slots:
     domain_of:
     - Person
     range: PersonStatus
+  test_int:
+    name: test_int
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/test_int
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:test_int
+    owner: Person
+    domain_of:
+    - Person
+    range: integer
   personCollection__entries:
     name: personCollection__entries
     from_schema: https://w3id.org/FoodDataCentral/mifc
@@ -456,6 +465,7 @@ classes:
     - birth_date
     - age_in_years
     - vital_status
+    - test_int
     slot_usage:
       primary_email:
         name: primary_email
@@ -478,7 +488,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-02-13T14:56:18'
-source_file_size: 2198
-generation_date: '2026-02-13T14:56:31'
+source_file_date: '2026-02-13T15:15:28'
+source_file_size: 2246
+generation_date: '2026-02-13T15:15:41'
 
