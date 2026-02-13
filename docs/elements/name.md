@@ -22,8 +22,8 @@ Alias: name
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](Person.md) | Represents a Person |  no  |
 | [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |  no  |
+| [Person](Person.md) | Represents a Person |  no  |
 
 
 
