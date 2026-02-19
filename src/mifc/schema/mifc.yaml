@@ -47,9 +47,6 @@ classes:
       - age_in_years
       - vital_status
       - test_int
-#    slot_usage:
-#      primary_email:
-#        pattern: "^\\S+@[\\S+\\.]+\\S+"
 
   Container:
     tree_root: true
