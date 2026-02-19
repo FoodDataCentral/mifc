@@ -105,15 +105,11 @@
          <lastmod>2026-02-19</lastmod>
     </url>
     <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/age_in_years/</loc>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/food_description_label/</loc>
          <lastmod>2026-02-19</lastmod>
     </url>
     <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/birth_date/</loc>
-         <lastmod>2026-02-19</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/description/</loc>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/food_sample_id/</loc>
          <lastmod>2026-02-19</lastmod>
     </url>
     <url>
@@ -121,27 +117,7 @@
          <lastmod>2026-02-19</lastmod>
     </url>
     <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/id/</loc>
-         <lastmod>2026-02-19</lastmod>
-    </url>
-    <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/mifc/</loc>
-         <lastmod>2026-02-19</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/name/</loc>
-         <lastmod>2026-02-19</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/primary_email/</loc>
-         <lastmod>2026-02-19</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/test_int/</loc>
-         <lastmod>2026-02-19</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/vital_status/</loc>
          <lastmod>2026-02-19</lastmod>
     </url>
 </urlset>

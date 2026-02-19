@@ -267,38 +267,17 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-food">Class: Food</h1>
-<p><em>Represents a Food</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/Food">mifc:Food</a></p>
+<p><em>Metadata about foods analyzed for components of nutritional interest.</em></p>
+<p>URI: <a href="http://schema.org/Food">schema:Food</a></p>
 <div class="mermaid"> classDiagram
     class Food
     click Food href "../Food/"
       NamedThing &lt;|-- Food
         click NamedThing href "../NamedThing/"
 
-      Food : age_in_years
+      Food : food_description_label
 
-      Food : birth_date
-
-      Food : description
-
-      Food : id
-
-      Food : name
-
-      Food : primary_email
-
-      Food : test_int
-
-      Food : vital_status
-
-
-
-
-
-        Food --&gt; "0..1" PersonStatus : vital_status
-        click PersonStatus href "../PersonStatus/"
-
-
+      Food : food_sample_id
 
 
 </div>
@@ -321,52 +300,16 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../primary_email/">primary_email</a></td>
+<td><a href="../food_sample_id/">food_sample_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The main email address of a person</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../birth_date/">birth_date</a></td>
-<td>0..1 <br/> <a href="../Date/">Date</a></td>
-<td>Date on which a person is born</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../age_in_years/">age_in_years</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>Number of years since birth</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../vital_status/">vital_status</a></td>
-<td>0..1 <br/> <a href="../PersonStatus/">PersonStatus</a></td>
-<td>living or dead status</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../test_int/">test_int</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../id/">id</a></td>
-<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>A unique identifier for a thing</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../name/">name</a></td>
+<td><a href="../food_description_label/">food_description_label</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A human-readable name for a thing</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A human-readable description for a thing</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
+<td></td>
+<td>direct</td>
 </tr>
 </tbody>
 </table>
@@ -405,7 +348,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:Food</td>
+<td>schema:Food</td>
 </tr>
 <tr>
 <td>native</td>
@@ -418,120 +361,42 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Food
-description: Represents a Food
+description: Metadata about foods analyzed for components of nutritional interest.
 from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
 slots:
-- primary_email
-- birth_date
-- age_in_years
-- vital_status
-- test_int
-slot_usage:
-  primary_email:
-    name: primary_email
-    pattern: ^\S+@[\S+\.]+\S+
+- food_sample_id
+- food_description_label
+class_uri: schema:Food
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Food
-description: Represents a Food
+description: Metadata about foods analyzed for components of nutritional interest.
 from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
-slot_usage:
-  primary_email:
-    name: primary_email
-    pattern: ^\S+@[\S+\.]+\S+
 attributes:
-  primary_email:
-    name: primary_email
-    description: The main email address of a person
+  food_sample_id:
+    name: food_sample_id
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
-    slot_uri: schema:email
-    alias: primary_email
+    alias: food_sample_id
     owner: Food
     domain_of:
     - Food
     range: string
-    pattern: ^\S+@[\S+\.]+\S+
-  birth_date:
-    name: birth_date
-    description: Date on which a person is born
+  food_description_label:
+    name: food_description_label
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
-    slot_uri: schema:birthDate
-    alias: birth_date
+    alias: food_description_label
     owner: Food
     domain_of:
     - Food
-    range: date
-  age_in_years:
-    name: age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    rank: 1000
-    alias: age_in_years
-    owner: Food
-    domain_of:
-    - Food
-    range: integer
-  vital_status:
-    name: vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    rank: 1000
-    alias: vital_status
-    owner: Food
-    domain_of:
-    - Food
-    range: PersonStatus
-  test_int:
-    name: test_int
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    rank: 1000
-    alias: test_int
-    owner: Food
-    domain_of:
-    - Food
-    range: integer
-  id:
-    name: id
-    description: A unique identifier for a thing
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    rank: 1000
-    slot_uri: schema:identifier
-    identifier: true
-    alias: id
-    owner: Food
-    domain_of:
-    - NamedThing
-    range: uriorcurie
-    required: true
-  name:
-    name: name
-    description: A human-readable name for a thing
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    rank: 1000
-    slot_uri: schema:name
-    alias: name
-    owner: Food
-    domain_of:
-    - NamedThing
     range: string
-  description:
-    name: description
-    description: A human-readable description for a thing
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    rank: 1000
-    slot_uri: schema:description
-    alias: description
-    owner: Food
-    domain_of:
-    - NamedThing
-    range: string
+class_uri: schema:Food
 
 </code></pre>
 </details>
