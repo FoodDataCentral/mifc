@@ -42,6 +42,7 @@ classes:
     class_uri: schema:Food
     slots:
       - food_sample_id
+      - food_description_label
       - primary_email
       - birth_date
       - age_in_years
@@ -86,6 +87,8 @@ slots:
   test_int:
     range: integer
   food_sample_id:
+    range: string
+  food_description_label:
     range: string
 
 enums:
