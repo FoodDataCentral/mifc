@@ -1,6 +1,4 @@
-# Example data object
+# Example Food object
 ---
-food_sample_id: "001"
-primary_email: foo.bar@example.com
-age_in_years: 33
-test_int: 12
+food_sample_id: "168566"
+food_description_label: "Tomatillos, raw"

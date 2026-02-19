@@ -1,8 +1,6 @@
 # A data example for a container with "inline" behaviour.
 foods:
-  - food_sample_id: example:Person001
-    primary_email: foo.bar@example.com
-    age_in_years: 33
-  - food_sample_id: example:Person002
-    primary_email: fuu.bor@example.com
-    age_in_years: 44
+  - food_sample_id: "168566"
+    primary_email: "Tomatillos, raw"
+  - food_sample_id: '167857'
+    food_description_label: "Pork, fresh, variety meats and by-products, ears, frozen, raw"
