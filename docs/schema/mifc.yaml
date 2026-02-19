@@ -1,5 +1,5 @@
 name: mifc
-description: The Minimum Information (about any) Food Composition (MIFC), data standard.
+description: The Minimum Information (about any) Food Composition (MIFC) data standard.
 title: mifc
 see_also:
 - https://FoodDataCentral.github.io/mifc
@@ -26,6 +26,24 @@ prefixes:
   example:
     prefix_prefix: example
     prefix_reference: https://example.org/
+  OBI:
+    prefix_prefix: OBI
+    prefix_reference: http://purl.obolibrary.org/obo/OBI_
+  skos:
+    prefix_prefix: skos
+    prefix_reference: http://www.w3.org/2004/02/skos/core#
+  rdfs:
+    prefix_prefix: rdfs
+    prefix_reference: http://www.w3.org/2000/01/rdf-schema#
+  rdf:
+    prefix_prefix: rdf
+    prefix_reference: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  FDC:
+    prefix_prefix: FDC
+    prefix_reference: https://fdc.nal.usda.gov/
+  PTFI:
+    prefix_prefix: PTFI
+    prefix_reference: https://foodperiodictable.org/
 default_prefix: mifc
 default_range: string
 types:
@@ -317,127 +335,36 @@ enums:
         todos:
         - map this to an ontology
 slots:
-  id:
-    name: id
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/id
-    description: A unique identifier for a thing
+  food_sample_id:
+    name: food_sample_id
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_sample_id
     from_schema: https://w3id.org/FoodDataCentral/mifc
-    mappings:
-    - schema:identifier
-    slot_uri: schema:identifier
-    identifier: true
-    owner: NamedThing
+    slot_uri: mifc:food_sample_id
+    owner: Food
     domain_of:
-    - NamedThing
-    range: uriorcurie
-    required: true
-  name:
-    name: name
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/name
-    description: A human-readable name for a thing
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    mappings:
-    - schema:name
-    slot_uri: schema:name
-    owner: NamedThing
-    domain_of:
-    - NamedThing
+    - Food
     range: string
-  description:
-    name: description
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/description
-    description: A human-readable description for a thing
+  food_description_label:
+    name: food_description_label
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_description_label
     from_schema: https://w3id.org/FoodDataCentral/mifc
-    mappings:
-    - schema:description
-    slot_uri: schema:description
-    owner: NamedThing
+    slot_uri: mifc:food_description_label
+    owner: Food
     domain_of:
-    - NamedThing
+    - Food
     range: string
-  primary_email:
-    name: primary_email
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/primary_email
-    description: The main email address of a person
+  container__foods:
+    name: container__foods
     from_schema: https://w3id.org/FoodDataCentral/mifc
-    mappings:
-    - schema:email
-    slot_uri: schema:email
-    owner: Person
+    slot_uri: mifc:foods
+    alias: foods
+    owner: Container
     domain_of:
-    - Person
-    range: string
-  birth_date:
-    name: birth_date
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/birth_date
-    description: Date on which a person is born
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    mappings:
-    - schema:birthDate
-    slot_uri: schema:birthDate
-    owner: Person
-    domain_of:
-    - Person
-    range: date
-  age_in_years:
-    name: age_in_years
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    slot_uri: mifc:age_in_years
-    owner: Person
-    domain_of:
-    - Person
-    range: integer
-  vital_status:
-    name: vital_status
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    slot_uri: mifc:vital_status
-    owner: Person
-    domain_of:
-    - Person
-    range: PersonStatus
-  test_int:
-    name: test_int
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/test_int
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    slot_uri: mifc:test_int
-    owner: Person
-    domain_of:
-    - Person
-    range: integer
-  personCollection__entries:
-    name: personCollection__entries
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    slot_uri: mifc:entries
-    alias: entries
-    owner: PersonCollection
-    domain_of:
-    - PersonCollection
-    range: Person
+    - Container
+    range: Food
     multivalued: true
     inlined: true
     inlined_as_list: true
-  Person_primary_email:
-    name: Person_primary_email
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    mappings:
-    - schema:email
-    is_a: primary_email
-    domain: Person
-    slot_uri: schema:email
-    alias: primary_email
-    owner: Person
-    domain_of:
-    - Person
-    is_usage_slot: true
-    usage_slot_name: primary_email
-    range: string
-    pattern: ^\S+@[\S+\.]+\S+
 classes:
   NamedThing:
     name: NamedThing
@@ -446,49 +373,38 @@ classes:
     from_schema: https://w3id.org/FoodDataCentral/mifc
     mappings:
     - schema:Thing
-    slots:
-    - id
-    - name
-    - description
+    abstract: true
     class_uri: schema:Thing
-  Person:
-    name: Person
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/Person
-    description: Represents a Person
+  Food:
+    name: Food
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/Food
+    description: Metadata about foods analyzed for components of nutritional interest.
     from_schema: https://w3id.org/FoodDataCentral/mifc
+    mappings:
+    - schema:Food
     is_a: NamedThing
     slots:
-    - id
-    - name
-    - description
-    - Person_primary_email
-    - birth_date
-    - age_in_years
-    - vital_status
-    - test_int
-    slot_usage:
-      primary_email:
-        name: primary_email
-        pattern: ^\S+@[\S+\.]+\S+
-    class_uri: mifc:Person
-  PersonCollection:
-    name: PersonCollection
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/PersonCollection
-    description: A holder for Person objects
+    - food_sample_id
+    - food_description_label
+    class_uri: schema:Food
+  Container:
+    name: Container
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/Container
+    description: A holder for Food, Component or Resource objects
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slots:
-    - personCollection__entries
+    - container__foods
     attributes:
-      entries:
-        name: entries
-        range: Person
+      foods:
+        name: foods
+        range: Food
         multivalued: true
         inlined_as_list: true
-    class_uri: mifc:PersonCollection
+    class_uri: mifc:Container
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-02-13T16:07:30'
-source_file_size: 2246
-generation_date: '2026-02-13T16:50:39'
+source_file_date: '2026-02-19T13:13:40'
+source_file_size: 1863
+generation_date: '2026-02-19T13:23:23'
 
