@@ -38,10 +38,10 @@ classes:
       - description
     class_uri: schema:Thing
 
-  Person:
+  Food:
     is_a: NamedThing
     description: >-
-      Represents a Person
+      Represents a Food
     slots:
       - primary_email
       - birth_date
@@ -55,10 +55,10 @@ classes:
   PersonCollection:
     tree_root: true
     description: >-
-      A holder for Person objects
+      A holder for Food objects
     attributes:
       entries:
-        range: Person
+        range: Food
         multivalued: true
         inlined_as_list: true
 
