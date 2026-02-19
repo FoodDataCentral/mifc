@@ -2,146 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/about/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Boolean/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
+    </url>
+    <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/Container/</loc>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Curie/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Date/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/DateOrDatetime/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Datetime/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Decimal/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Double/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Float/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
+    </url>
+    <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/Food/</loc>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Integer/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Jsonpath/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Jsonpointer/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/NamedThing/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Ncname/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Nodeidentifier/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Objectidentifier/</loc>
-         <lastmod>2026-02-13</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/Person/</loc>
-         <lastmod>2026-02-13</lastmod>
-    </url>
-    <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/PersonCollection/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/PersonStatus/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Sparqlpath/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/String/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Time/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Uri/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/Uriorcurie/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/age_in_years/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/birth_date/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/description/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
-         <loc>https://FoodDataCentral.github.io/mifc/elements/entries/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/foods/</loc>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/id/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/mifc/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/name/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/primary_email/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/test_int/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/vital_status/</loc>
-         <lastmod>2026-02-13</lastmod>
+         <lastmod>2026-02-19</lastmod>
     </url>
 </urlset>

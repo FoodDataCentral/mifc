@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://FoodDataCentral.github.io/mifc/elements/Person/" rel="canonical"/>
+<link href="https://FoodDataCentral.github.io/mifc/elements/Food/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.1" name="generator"/>
-<title>Class: Person - mifc</title>
+<title>Class: Food - mifc</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-person">
+<a class="md-skip" href="#class-food">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Person
+              Class: Food
             
           </span>
 </div>
@@ -266,36 +266,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="class-person">Class: Person</h1>
-<p><em>Represents a Person</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/Person">mifc:Person</a></p>
+<h1 id="class-food">Class: Food</h1>
+<p><em>Represents a Food</em></p>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/Food">mifc:Food</a></p>
 <div class="mermaid"> classDiagram
-    class Person
-    click Person href "../Person/"
-      NamedThing &lt;|-- Person
+    class Food
+    click Food href "../Food/"
+      NamedThing &lt;|-- Food
         click NamedThing href "../NamedThing/"
 
-      Person : age_in_years
+      Food : age_in_years
 
-      Person : birth_date
+      Food : birth_date
 
-      Person : description
+      Food : description
 
-      Person : id
+      Food : id
 
-      Person : name
+      Food : name
 
-      Person : primary_email
+      Food : primary_email
 
-      Person : test_int
+      Food : test_int
 
-      Person : vital_status
-
-
+      Food : vital_status
 
 
 
-        Person --&gt; "0..1" PersonStatus : vital_status
+
+
+        Food --&gt; "0..1" PersonStatus : vital_status
         click PersonStatus href "../PersonStatus/"
 
 
@@ -305,7 +305,7 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedThing/">NamedThing</a><ul>
-<li><strong>Person</strong></li>
+<li><strong>Food</strong></li>
 </ul>
 </li>
 </ul>
@@ -382,10 +382,10 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../PersonCollection/">PersonCollection</a></td>
-<td><a href="../entries/">entries</a></td>
+<td><a href="../Container/">Container</a></td>
+<td><a href="../foods/">foods</a></td>
 <td>range</td>
-<td><a href="./">Person</a></td>
+<td><a href="./">Food</a></td>
 </tr>
 </tbody>
 </table>
@@ -405,11 +405,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:Person</td>
+<td>mifc:Food</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:Person</td>
+<td>mifc:Food</td>
 </tr>
 </tbody>
 </table>
@@ -417,8 +417,8 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Person
-description: Represents a Person
+<pre><code class="language-yaml">name: Food
+description: Represents a Food
 from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
 slots:
@@ -436,8 +436,8 @@ slot_usage:
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Person
-description: Represents a Person
+<pre><code class="language-yaml">name: Food
+description: Represents a Food
 from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
 slot_usage:
@@ -452,9 +452,9 @@ attributes:
     rank: 1000
     slot_uri: schema:email
     alias: primary_email
-    owner: Person
+    owner: Food
     domain_of:
-    - Person
+    - Food
     range: string
     pattern: ^\S+@[\S+\.]+\S+
   birth_date:
@@ -464,9 +464,9 @@ attributes:
     rank: 1000
     slot_uri: schema:birthDate
     alias: birth_date
-    owner: Person
+    owner: Food
     domain_of:
-    - Person
+    - Food
     range: date
   age_in_years:
     name: age_in_years
@@ -474,9 +474,9 @@ attributes:
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
     alias: age_in_years
-    owner: Person
+    owner: Food
     domain_of:
-    - Person
+    - Food
     range: integer
   vital_status:
     name: vital_status
@@ -484,18 +484,18 @@ attributes:
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
     alias: vital_status
-    owner: Person
+    owner: Food
     domain_of:
-    - Person
+    - Food
     range: PersonStatus
   test_int:
     name: test_int
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
     alias: test_int
-    owner: Person
+    owner: Food
     domain_of:
-    - Person
+    - Food
     range: integer
   id:
     name: id
@@ -505,7 +505,7 @@ attributes:
     slot_uri: schema:identifier
     identifier: true
     alias: id
-    owner: Person
+    owner: Food
     domain_of:
     - NamedThing
     range: uriorcurie
@@ -517,7 +517,7 @@ attributes:
     rank: 1000
     slot_uri: schema:name
     alias: name
-    owner: Person
+    owner: Food
     domain_of:
     - NamedThing
     range: string
@@ -528,7 +528,7 @@ attributes:
     rank: 1000
     slot_uri: schema:description
     alias: description
-    owner: Person
+    owner: Food
     domain_of:
     - NamedThing
     range: string
