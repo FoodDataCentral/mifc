@@ -41,7 +41,8 @@ classes:
   Food:
     is_a: NamedThing
     description: >-
-      Represents a Food
+      Metadata about foods analyzed for components of nutritional interest.
+    class_uri: schema:Food
     slots:
       - primary_email
       - birth_date
