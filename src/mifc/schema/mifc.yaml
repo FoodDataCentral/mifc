@@ -52,16 +52,6 @@ classes:
       primary_email:
         pattern: "^\\S+@[\\S+\\.]+\\S+"
 
-  PersonCollection:
-    tree_root: true
-    description: >-
-      A holder for Food objects
-    attributes:
-      entries:
-        range: Food
-        multivalued: true
-        inlined_as_list: true
-
   Container:
     tree_root: true
     description: >-
