@@ -32,6 +32,7 @@ classes:
   NamedThing:
     description: >-
       A generic grouping for any identifiable entity
+    abstract: true     ## should not be instantiated directly serves as parent class only
     class_uri: schema:Thing
 
   Food:
