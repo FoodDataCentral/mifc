@@ -1,10 +1,8 @@
 # A data example for a container with "inline" behaviour.
 foods:
-  - id: example:Person001
-    name: foo bar
+  - food_sample_id: example:Person001
     primary_email: foo.bar@example.com
     age_in_years: 33
-  - id: example:Person002
-    name: fuu bor
+  - food_sample_id: example:Person002
     primary_email: fuu.bor@example.com
     age_in_years: 44
