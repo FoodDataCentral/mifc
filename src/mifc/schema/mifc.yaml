@@ -43,11 +43,6 @@ classes:
     slots:
       - food_sample_id
       - food_description_label
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-      - test_int
 
   Container:
     tree_root: true
@@ -60,32 +55,6 @@ classes:
         range: Food
 
 slots:
-  id:
-    identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
-    slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
-    range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
-  test_int:
-    range: integer
   food_sample_id:
     range: string
   food_description_label:
