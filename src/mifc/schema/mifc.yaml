@@ -64,6 +64,8 @@ classes:
 
   Container:
     tree_root: true
+    description: >-
+      A holder for Food, Component or Resource objects
     attributes:
       foods:
         multivalued: true
