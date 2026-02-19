@@ -15,6 +15,12 @@ prefixes:
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   example: https://example.org/
+  OBI: http://purl.obolibrary.org/obo/OBI_
+  skos: http://www.w3.org/2004/02/skos/core#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  FDC: https://fdc.nal.usda.gov/
+  PTFI: https://foodperiodictable.org/
 default_prefix: mifc
 default_range: string
 
