@@ -4,7 +4,7 @@ name: mifc
 title: mifc
 description: |-
   The Minimum Information (about any) Food Composition (MIFC) data standard.
-license: MIT
+license: CC0
 see_also:
   - https://FoodDataCentral.github.io/mifc
 
