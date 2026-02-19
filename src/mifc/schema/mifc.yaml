@@ -62,6 +62,14 @@ classes:
         multivalued: true
         inlined_as_list: true
 
+  Container:
+    tree_root: true
+    attributes:
+      foods:
+        multivalued: true
+        inlined_as_list: true
+        range: Food
+
 slots:
   id:
     identifier: true
