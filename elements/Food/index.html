@@ -208,6 +208,15 @@
 <nav aria-label="Identifier and Mapping Information" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#valid-id-prefixes">
+<span class="md-ellipsis">
+      
+        Valid ID Prefixes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#schema-source">
 <span class="md-ellipsis">
       
@@ -275,9 +284,176 @@
       NamedThing &lt;|-- Food
         click NamedThing href "../NamedThing/"
 
+      Food : food_acquisition_agent_name
+
+      Food : food_acquisition_city
+
+      Food : food_acquisition_country
+
+
+
+
+
+        Food --&gt; "0..1 _recommended_" CountryCode : food_acquisition_country
+        click CountryCode href "../CountryCode/"
+
+
+
+      Food : food_acquisition_country_subdivision
+
+      Food : food_acquisition_date
+
+      Food : food_acquisition_latitude
+
+      Food : food_acquisition_location_name
+
+      Food : food_acquisition_location_type
+
+
+
+
+
+        Food --&gt; "0..1 _recommended_" FoodAcquisitionLocationType : food_acquisition_location_type
+        click FoodAcquisitionLocationType href "../FoodAcquisitionLocationType/"
+
+
+
+      Food : food_acquisition_longitude
+
+      Food : food_acquisition_organization
+
+      Food : food_acquisition_year
+
+      Food : food_additional_types
+
+      Food : food_brand_name
+
+      Food : food_category_label
+
+      Food : food_category_type
+
+      Food : food_comment
+
+      Food : food_cooking_method
+
+
+
+
+
+        Food --&gt; "* _recommended_" FoodCookingMethod : food_cooking_method
+        click FoodCookingMethod href "../FoodCookingMethod/"
+
+
+
       Food : food_description_label
 
+      Food : food_description_match_type
+
+
+
+
+
+        Food --&gt; "0..1 _recommended_" SkosMatchType : food_description_match_type
+        click SkosMatchType href "../SkosMatchType/"
+
+
+
+      Food : food_distributor_city
+
+      Food : food_distributor_country
+
+
+
+
+
+        Food --&gt; "0..1" CountryCode : food_distributor_country
+        click CountryCode href "../CountryCode/"
+
+
+
+      Food : food_distributor_country_subdivision
+
+      Food : food_expiration_date
+
+      Food : food_label_date
+
+      Food : food_label_weight
+
+      Food : food_label_weight_unit
+
+      Food : food_lot_number
+
+      Food : food_origin_country
+
+
+
+
+
+        Food --&gt; "0..1" CountryCode : food_origin_country
+        click CountryCode href "../CountryCode/"
+
+
+
+      Food : food_preservation_state
+
+
+
+
+
+        Food --&gt; "* _recommended_" FoodPreservationState : food_preservation_state
+        click FoodPreservationState href "../FoodPreservationState/"
+
+
+
+      Food : food_primary_type
+
+      Food : food_primary_type_animal_breed_name
+
+      Food : food_primary_type_cultivar_name
+
+      Food : food_primary_type_label
+
+      Food : food_primary_type_ncbi_taxon_id
+
+      Food : food_primary_type_scientific_name
+
+      Food : food_ripeness_state
+
+
+
+
+
+        Food --&gt; "0..1" FoodRipenessState : food_ripeness_state
+        click FoodRipenessState href "../FoodRipenessState/"
+
+
+
+      Food : food_sample_digested_weight
+
+      Food : food_sample_digested_weight_unit
+
       Food : food_sample_id
+
+      Food : food_sample_publication_date
+
+      Food : food_sample_weight
+
+      Food : food_sample_weight_unit
+
+      Food : food_sell_by_date
+
+      Food : food_storage_temperature_state
+
+
+
+
+
+        Food --&gt; "* _recommended_" FoodStorageTemperatureState : food_storage_temperature_state
+        click FoodStorageTemperatureState href "../FoodStorageTemperatureState/"
+
+
+
+      Food : food_upc_code
 
 
 </div>
@@ -301,14 +477,272 @@
 <tbody>
 <tr>
 <td><a href="../food_sample_id/">food_sample_id</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the primary identifier for a sample of the class Food</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_description_label/">food_description_label</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string clearly and unambiguous describing the sampled primary food material...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type/">food_primary_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term representing the primary food material which was...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_label/">food_primary_type_label</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string denoting the label of a controlled vocabulary term representing the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_scientific_name/">food_primary_type_scientific_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A string denoting the scientific name, (in binomial nomenclature) of an organ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_cultivar_name/">food_primary_type_cultivar_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the cultivar name of the primary food material</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_animal_breed_name/">food_primary_type_animal_breed_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the breed name of the primary food material</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_ncbi_taxon_id/">food_primary_type_ncbi_taxon_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A curie from the ontology representation of the NCBI organismal taxonomy (NCB...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_description_match_type/">food_description_match_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../SkosMatchType/">SkosMatchType</a></td>
+<td>A value from a controlled vocabulary term representing the type of mapping be...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_upc_code/">food_upc_code</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>An string denoting a Universal Product Code (UPC) barcode of a food sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_preservation_state/">food_preservation_state</a></td>
+<td>* <em>recommended</em> <br/> <a href="../FoodPreservationState/">FoodPreservationState</a></td>
+<td>One or multiple values from an enumerated set of controlled vocabulary terms ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_storage_temperature_state/">food_storage_temperature_state</a></td>
+<td>* <em>recommended</em> <br/> <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></td>
+<td>One or multiple values from an enumerated set of controlled vocabulary terms ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_ripeness_state/">food_ripeness_state</a></td>
+<td>0..1 <br/> <a href="../FoodRipenessState/">FoodRipenessState</a></td>
+<td>A value from a enumerated set of controlled vocabulary terms representing the...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_cooking_method/">food_cooking_method</a></td>
+<td>* <em>recommended</em> <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
+<td>One or multiple values from an enumerated set of controlled vocabulary terms ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_origin_country/">food_origin_country</a></td>
+<td>0..1 <br/> <a href="../CountryCode/">CountryCode</a></td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting denoti...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_city/">food_acquisition_city</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the city in which a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_country/">food_acquisition_country</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../CountryCode/">CountryCode</a></td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting denoti...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_country_subdivision/">food_acquisition_country_subdivision</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country subdivision (state or province) from which a fo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_date/">food_acquisition_date</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the date a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_year/">food_acquisition_year</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string value representing the year a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_location_type/">food_acquisition_location_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../FoodAcquisitionLocationType/">FoodAcquisitionLocationType</a></td>
+<td>A value from an enumerated set of controlled vocabulary terms describing the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_location_name/">food_acquisition_location_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string describing the name of the location from which a food sample was acq...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_latitude/">food_acquisition_latitude</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the latitude of the place from which the food sample was...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_longitude/">food_acquisition_longitude</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the longitude of the place from which the food sample wa...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_agent_name/">food_acquisition_agent_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the name of the agent (person, device or other type of serv...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_organization/">food_acquisition_organization</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the name of the organization responsible for acquired the f...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_city/">food_distributor_city</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the city of a distributor organization from which a food sa...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_country/">food_distributor_country</a></td>
+<td>0..1 <br/> <a href="../CountryCode/">CountryCode</a></td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting denoti...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_country_subdivision/">food_distributor_country_subdivision</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country subdivision (state or province) of a distributo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_expiration_date/">food_expiration_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the food expiration date as shown on the labeling i...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_label_date/">food_label_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the food label date as shown on the labeling inform...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sell_by_date/">food_sell_by_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing a date that indicates to stores how long to display...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_category_label/">food_category_label</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string or controlled vocabulary denoting the label of the food group or cat...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_category_type/">food_category_type</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term representing the category of the food material t...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_additional_types/">food_additional_types</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td>A list of controlled vocabulary denoting the label(s) of additional food type...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_brand_name/">food_brand_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting a name identifying a product, service, or organization sell...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_lot_number/">food_lot_number</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the identifying lot number number assigned by a manufacture...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_label_weight/">food_label_weight</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float denoting the mass, (or weight on earth) as specified on the product l...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_label_weight_unit/">food_label_weight_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unit code representing the unit of measurement in which a food_label_weight...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sample_publication_date/">food_sample_publication_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A date value representing the date in which a food sample was published</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_comment/">food_comment</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string representing a comment relating to a food sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sample_weight/">food_sample_weight</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float denoting the mass, (or weight on earth) of a food sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sample_weight_unit/">food_sample_weight_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unit code representing the unit of measurement in which a food_sample_weigh...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sample_digested_weight/">food_sample_digested_weight</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float denoting the mass, (or weight on earth) of a food sample after being ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sample_digested_weight_unit/">food_sample_digested_weight_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unit code representing the unit of measurement in which a food_sample_diges...</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -333,6 +767,11 @@
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="valid-id-prefixes">Valid ID Prefixes</h3>
+<p>Instances of this class <em>should</em> have identifiers with one of the following prefixes:</p>
+<ul>
+<li>mifc</li>
+</ul>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
 <li>from schema: https://w3id.org/FoodDataCentral/mifc</li>
@@ -361,12 +800,59 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Food
+id_prefixes:
+- mifc
 description: Metadata about foods analyzed for components of nutritional interest.
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
 slots:
 - food_sample_id
 - food_description_label
+- food_primary_type
+- food_primary_type_label
+- food_primary_type_scientific_name
+- food_primary_type_cultivar_name
+- food_primary_type_animal_breed_name
+- food_primary_type_ncbi_taxon_id
+- food_description_match_type
+- food_upc_code
+- food_preservation_state
+- food_storage_temperature_state
+- food_ripeness_state
+- food_cooking_method
+- food_origin_country
+- food_acquisition_city
+- food_acquisition_country
+- food_acquisition_country_subdivision
+- food_acquisition_date
+- food_acquisition_year
+- food_acquisition_location_type
+- food_acquisition_location_name
+- food_acquisition_latitude
+- food_acquisition_longitude
+- food_acquisition_agent_name
+- food_acquisition_organization
+- food_distributor_city
+- food_distributor_country
+- food_distributor_country_subdivision
+- food_expiration_date
+- food_label_date
+- food_sell_by_date
+- food_category_label
+- food_category_type
+- food_additional_types
+- food_brand_name
+- food_lot_number
+- food_label_weight
+- food_label_weight_unit
+- food_sample_publication_date
+- food_comment
+- food_sample_weight
+- food_sample_weight_unit
+- food_sample_digested_weight
+- food_sample_digested_weight_unit
 class_uri: schema:Food
 
 </code></pre>
@@ -374,12 +860,26 @@ class_uri: schema:Food
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Food
+id_prefixes:
+- mifc
 description: Metadata about foods analyzed for components of nutritional interest.
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
 attributes:
   food_sample_id:
     name: food_sample_id
+    description: A string denoting the primary identifier for a sample of the class
+      Food. Note that food_sample_id should be unique in a given dataset and should
+      be used to relate Food and Component records via component_sample_id from the
+      Component class.
+    comments:
+    - 'Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html'
+    examples:
+    - value: CY121UM
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
     alias: food_sample_id
@@ -387,11 +887,685 @@ attributes:
     domain_of:
     - Food
     range: string
+    required: true
   food_description_label:
     name: food_description_label
+    description: A string clearly and unambiguous describing the sampled primary food
+      material, in accordance with globally accepted guidelines for the description
+      of foods.
+    comments:
+    - 'For reference see book by Greenfield and Southgate ''Food Composition Data:
+      Production Management and Use'' ISBN-10 9251049491 and cited literature'
+    examples:
+    - value: Yam, raw
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
     alias: food_description_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    required: true
+  food_primary_type:
+    name: food_primary_type
+    description: A controlled vocabulary term representing the primary food material
+      which was sampled.
+    comments:
+    - The food_primary_type could be sourced from one of various food vocabularies
+      such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+    examples:
+    - value: FOODON:03311865
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - FDC:NDB_number
+    rank: 1000
+    slot_uri: schema:name
+    alias: food_primary_type
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    recommended: true
+  food_primary_type_label:
+    name: food_primary_type_label
+    description: A string denoting the label of a controlled vocabulary term representing
+      the primary food material which was sampled.
+    comments:
+    - This field is to be used only for the string labels of from controlled vocabulary
+      terms which are mapped to the food_description_label.
+    examples:
+    - value: piece of chicken (raw)
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    close_mappings:
+    - PTFI:Specimen_Food_Product_Name
+    rank: 1000
+    alias: food_primary_type_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    recommended: true
+  food_primary_type_scientific_name:
+    name: food_primary_type_scientific_name
+    description: A string denoting the scientific name, (in binomial nomenclature)
+      of an organism that a food material is primarily composed of.
+    comments:
+    - This slot should only be used in cases where food materials are single ingredient
+      foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted
+      anchovies canned in oil".
+    examples:
+    - value: Gallus gallus
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_primary_type_scientific_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_cultivar_name:
+    name: food_primary_type_cultivar_name
+    description: A string denoting the cultivar name of the primary food material.
+    examples:
+    - value: Adirondack Blue
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_primary_type_cultivar_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_animal_breed_name:
+    name: food_primary_type_animal_breed_name
+    description: A string denoting the breed name of the primary food material.
+    comments:
+    - This slot should only be used in cases where food material is an animal with
+      a recognizable breed name that is managed by a national breed registry, breed
+      association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
+    examples:
+    - value: Wagyu
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_primary_type_animal_breed_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_ncbi_taxon_id:
+    name: food_primary_type_ncbi_taxon_id
+    description: A curie from the ontology representation of the NCBI organismal taxonomy
+      (NCBITaxon) describing the taxonomic identifier of the primary food material.
+    comments:
+    - To do specify an NCBITaxon curie as the range for the slot.
+    examples:
+    - value: NCBITaxon:9031
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_primary_type_ncbi_taxon_id
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_description_match_type:
+    name: food_description_match_type
+    description: A value from a controlled vocabulary term representing the type of
+      mapping between the food_description_label and food_primary_type_label.
+    comments:
+    - Note that the subject is the food_description_label and the object is food_primary_type_label
+    - See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml
+    examples:
+    - value: skos:exactMatch
+      description: Mappings assessed to indicate a high degree of confidence that
+        the concepts expressed in the subject and object terms can be used interchangeably.
+        In SKOS this is described as following the transitive property.
+    - value: skos:closeMatch
+      description: Mappings between the subject and object terms that convey a high
+        degree of similarity, but are not exactly the same or interchangeable.
+    - value: skos:broadMatch
+      description: Mappings between a subject and object terms, where the object term
+        is above the subject within a concept hierarchy.
+    - value: skos:narrowMatch
+      description: Mappings between a subject and object terms, where the object term
+        that is below the subject within a concept hierarchy.
+    - value: skos:relatedMatch
+      description: Mappings between subject and object terms that might have some
+        association but are not clearly not referring to the the same or similar concepts.
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_description_match_type
+    owner: Food
+    domain_of:
+    - Food
+    range: SkosMatchType
+    recommended: true
+  food_upc_code:
+    name: food_upc_code
+    description: An string denoting a Universal Product Code (UPC) barcode of a food
+      sample.
+    examples:
+    - value: '40822011143'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_upc_code
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_preservation_state:
+    name: food_preservation_state
+    description: One or multiple values from an enumerated set of controlled vocabulary
+      terms representing the preservation state(s) of a food sample.
+    examples:
+    - value: '[raw]'
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_preservation_state
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodPreservationState
+    recommended: true
+    multivalued: true
+  food_storage_temperature_state:
+    name: food_storage_temperature_state
+    description: One or multiple values from an enumerated set of controlled vocabulary
+      terms representing the qualitative temperature state at which a food sample
+      was stored prior to acquisition.
+    examples:
+    - value: '[frozen]'
+    - value: '[frozen|refrigerated]'
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_storage_temperature_state
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodStorageTemperatureState
+    recommended: true
+    multivalued: true
+  food_ripeness_state:
+    name: food_ripeness_state
+    description: A value from a enumerated set of controlled vocabulary terms representing
+      the qualitative freshness state of a food sample when prepared for analysis.
+    examples:
+    - value: unripe
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_ripeness_state
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodRipenessState
+  food_cooking_method:
+    name: food_cooking_method
+    description: One or multiple values from an enumerated set of controlled vocabulary
+      terms representing the any cooking method(s) applied to a food sample prior
+      to analysis.
+    examples:
+    - value: '[boiled|steamed]'
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_cooking_method
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodCookingMethod
+    recommended: true
+    multivalued: true
+  food_origin_country:
+    name: food_origin_country
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      denoting the country code from which a food sample originates.
+    examples:
+    - value: AFG
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_origin_country
+    owner: Food
+    domain_of:
+    - Food
+    range: CountryCode
+  food_acquisition_city:
+    name: food_acquisition_city
+    description: A string denoting the city in which a food sample was acquired.
+    examples:
+    - value: Tucson
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    close_mappings:
+    - PTFI:Collection_Location
+    rank: 1000
+    alias: food_acquisition_city
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_country:
+    name: food_acquisition_country
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      denoting the country code from which a food sample was acquired.
+    examples:
+    - value: AFG
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_acquisition_country
+    owner: Food
+    domain_of:
+    - Food
+    range: CountryCode
+    recommended: true
+  food_acquisition_country_subdivision:
+    name: food_acquisition_country_subdivision
+    description: A string denoting the country subdivision (state or province) from
+      which a food sample was acquired.
+    examples:
+    - value: PA
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_acquisition_country_subdivision
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_date:
+    name: food_acquisition_date
+    description: A date value representing the date a food sample was acquired.
+    examples:
+    - value: '2023-03-08'
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - PTFI:Collection_Date
+    rank: 1000
+    alias: food_acquisition_date
+    owner: Food
+    domain_of:
+    - Food
+    range: date
+    recommended: true
+  food_acquisition_year:
+    name: food_acquisition_year
+    description: A string value representing the year a food sample was acquired.
+    comments:
+    - When possible food_acquisition_date should be used instead of food_acquisition_date_year.
+    examples:
+    - value: '2011'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_acquisition_year
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_location_type:
+    name: food_acquisition_location_type
+    description: A value from an enumerated set of controlled vocabulary terms describing
+      the type of location from which a food sample was acquired.
+    examples:
+    - value: supermarket
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - PTFI:Collection_Type
+    rank: 1000
+    alias: food_acquisition_location_type
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodAcquisitionLocationType
+    recommended: true
+  food_acquisition_location_name:
+    name: food_acquisition_location_name
+    description: A string describing the name of the location from which a food sample
+      was acquired.
+    examples:
+    - value: Safeway
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_acquisition_location_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_latitude:
+    name: food_acquisition_latitude
+    description: A float representing the latitude of the place from which the food
+      sample was acquired.
+    examples:
+    - value: '25.761681'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - PTFI:Collection_Latitude
+    rank: 1000
+    alias: food_acquisition_latitude
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_acquisition_longitude:
+    name: food_acquisition_longitude
+    description: A float representing the longitude of the place from which the food
+      sample was acquired.
+    examples:
+    - value: '-80.191788'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - PTFI:Collection_Longitude
+    rank: 1000
+    alias: food_acquisition_longitude
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_acquisition_agent_name:
+    name: food_acquisition_agent_name
+    description: A string denoting the name of the agent (person, device or other
+      type of service) that acquired the food sample.
+    examples:
+    - value: Denise Trainer
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - PTFI:Collector_Name
+    rank: 1000
+    alias: food_acquisition_agent_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_organization:
+    name: food_acquisition_organization
+    description: A string denoting the name of the organization responsible for acquired
+      the food sample.
+    examples:
+    - value: USDA Food for Health of People and the Environment Laboratory
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    exact_mappings:
+    - PTFI:Collector_Organization
+    rank: 1000
+    alias: food_acquisition_organization
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_city:
+    name: food_distributor_city
+    description: A string denoting the city of a distributor organization from which
+      a food sample was acquired.
+    examples:
+    - value: Veracruz
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_distributor_city
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_country:
+    name: food_distributor_country
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      denoting the country code of a distributor organization from which a food sample
+      was acquired.
+    examples:
+    - value: AFG
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_distributor_country
+    owner: Food
+    domain_of:
+    - Food
+    range: CountryCode
+  food_distributor_country_subdivision:
+    name: food_distributor_country_subdivision
+    description: A string denoting the country subdivision (state or province) of
+      a distributor organization from which a food sample was acquired.
+    comments:
+    - To be determined if state codes should be specified over full names of states/provinces
+      for countries globally.
+    examples:
+    - value: Ohio
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_distributor_country_subdivision
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_expiration_date:
+    name: food_expiration_date
+    description: A date value representing the food expiration date as shown on the
+      labeling information of the food sample.
+    examples:
+    - value: '2023-03-08'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_expiration_date
+    owner: Food
+    domain_of:
+    - Food
+    range: date
+  food_label_date:
+    name: food_label_date
+    description: A date value representing the food label date as shown on the labeling
+      information of the food sample.
+    comments:
+    - This field can be used in cases where it is unclear if a label date is an expiration
+      date, sell by date, use by or other date on a product label.
+    examples:
+    - value: '2023-03-08'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_label_date
+    owner: Food
+    domain_of:
+    - Food
+    range: date
+  food_sell_by_date:
+    name: food_sell_by_date
+    description: A date value representing a date that indicates to stores how long
+      to display a food product for sale for inventory management purposes.
+    comments:
+    - Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
+    examples:
+    - value: '2023-03-08'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_sell_by_date
+    owner: Food
+    domain_of:
+    - Food
+    range: date
+  food_category_label:
+    name: food_category_label
+    description: A string or controlled vocabulary denoting the label of the food
+      group or category of the primary food material.
+    examples:
+    - value: Beverages
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_category_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_category_type:
+    name: food_category_type
+    description: A controlled vocabulary term representing the category of the food
+      material that was sampled.
+    examples:
+    - value: FOOD:1400
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_category_type
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_additional_types:
+    name: food_additional_types
+    description: A list of controlled vocabulary denoting the label(s) of additional
+      food types, not including the food_primary_type that are in a food sample.
+    examples:
+    - value: '[wheat flour (enriched)|syrup|water|salt]'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_additional_types
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    multivalued: true
+  food_brand_name:
+    name: food_brand_name
+    description: A string denoting a name identifying a product, service, or organization
+      selling and or distributing the primary food material.
+    examples:
+    - value: Bob's Red Mill
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_brand_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_lot_number:
+    name: food_lot_number
+    description: A string denoting the identifying lot number number assigned by a
+      manufacturer to a particular quantity, (or lot) of the sampled primary food
+      material.
+    comments:
+    - A lot number can also be referred to as lot code.
+    examples:
+    - value: '9500'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_lot_number
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_label_weight:
+    name: food_label_weight
+    description: A float denoting the mass, (or weight on earth) as specified on the
+      product label of a sampled primary food material.
+    comments:
+    - This field should be used in along with food_acquisition_label_weight_unit to
+      express the units the food_label_weight was measured.
+    examples:
+    - value: '24'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_label_weight
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_label_weight_unit:
+    name: food_label_weight_unit
+    description: A unit code representing the unit of measurement in which a food_label_weight
+      is measured.
+    examples:
+    - value: '[oz_av]'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_label_weight_unit
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_sample_publication_date:
+    name: food_sample_publication_date
+    description: A date value representing the date in which a food sample was published.
+    examples:
+    - value: '2020-10-30'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_sample_publication_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_comment:
+    name: food_comment
+    description: A string representing a comment relating to a food sample.
+    examples:
+    - value: Bananas where green at time of sampling and yellow at the time of analysis.
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_comment
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_sample_weight:
+    name: food_sample_weight
+    description: A float denoting the mass, (or weight on earth) of a food sample.
+    comments:
+    - This field should be used in along with food_sample_weight_unit to express the
+      units the food_sample_weight was measured in.
+    examples:
+    - value: '304'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_sample_weight
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_sample_weight_unit:
+    name: food_sample_weight_unit
+    description: A unit code representing the unit of measurement in which a food_sample_weight_unit
+      is measured.
+    examples:
+    - value: g
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_sample_weight_unit
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_sample_digested_weight:
+    name: food_sample_digested_weight
+    description: A float denoting the mass, (or weight on earth) of a food sample
+      after being subject to a chemical or enzymatic digestion process prior to analysis
+      of components of nutritional interest.
+    comments:
+    - This field should be used in along with food_sample_digested_weight_unit to
+      express the units the food_sample_digested_weight was measured in.
+    examples:
+    - value: '209'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_sample_digested_weight
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_sample_digested_weight_unit:
+    name: food_sample_digested_weight_unit
+    description: A unit code representing the unit of measurement in which a food_sample_digested_weight
+      is measured.
+    examples:
+    - value: g
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: food_sample_digested_weight_unit
     owner: Food
     domain_of:
     - Food
