@@ -142,3 +142,7 @@ dmypy.json
 .idea
 # Local vscode editor config
 .vscode
+
+# Manual Additions
+.DS_Store
+tests/data/valid/.DS_Store
