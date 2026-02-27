@@ -42,13 +42,61 @@ classes:
     class_uri: schema:Thing
 
   Food:
-    is_a: NamedThing
     description: >-
       Metadata about foods analyzed for components of nutritional interest.
+    is_a: NamedThing  ## inheritance
     class_uri: schema:Food
-    slots:
+    in_subset:
+      - RecommendedSubset
+    slots: ## Slots specific to foods
       - food_sample_id
       - food_description_label
+      - food_primary_type
+      - food_primary_type_label
+      - food_primary_type_scientific_name
+      - food_primary_type_cultivar_name
+      - food_primary_type_animal_breed_name
+      - food_primary_type_ncbi_taxon_id
+      - food_description_match_type
+      - food_upc_code
+      - food_preservation_state
+      - food_storage_temperature_state
+      - food_ripeness_state
+      - food_cooking_method
+      - food_origin_country
+      - food_acquisition_city
+      - food_acquisition_country
+      - food_acquisition_country_subdivision
+      - food_acquisition_date
+      - food_acquisition_year
+      - food_acquisition_location_type
+      - food_acquisition_location_name
+      - food_acquisition_latitude
+      - food_acquisition_longitude
+      - food_acquisition_agent_name
+      - food_acquisition_organization
+      - food_distributor_city
+      - food_distributor_country
+      - food_distributor_country_subdivision
+      - food_expiration_date
+      - food_label_date
+      - food_sell_by_date
+      - food_category_label
+      - food_category_type
+      - food_additional_types
+      - food_brand_name
+      - food_lot_number
+      - food_label_weight
+      - food_label_weight_unit
+      - food_sample_publication_date
+      - food_comment
+      - food_sample_weight
+      - food_sample_weight_unit
+      - food_sample_digested_weight
+      - food_sample_digested_weight_unit
+    id_prefixes:
+      - mifc
+
 
   Container:
     tree_root: true
@@ -61,10 +109,297 @@ classes:
         range: Food
 
 slots:
+  # Food slots
   food_sample_id:
+    description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
+    required: true
     range: string
+    #identifier: true # Forces food_sample_id keys to be unique
+    comments:
+      - "Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html"
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: CY121UM
   food_description_label:
+    description: A string clearly and unambiguous describing the sampled primary food material, in accordance with globally accepted guidelines for the description of foods.
+    required: true
+    comments:
+      - "For reference see book by Greenfield and Southgate 'Food Composition Data: Production Management and Use' ISBN-10 9251049491 and cited literature"
+    examples:
+      - value: Yam, raw
+    in_subset:
+      - RecommendedSubset
+  food_primary_type:
+    description: A controlled vocabulary term representing the primary food material which was sampled.
+    comments:
+      - The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+    examples:
+      value: FOODON:03311865
+    slot_uri: schema:name
+    exact_mappings:
+      - FDC:NDB_number
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+  food_description_match_type:
+    description: A value from a controlled vocabulary term representing the type of mapping between the food_description_label and food_primary_type_label.
+    recommended: true
+    range: SkosMatchType
+    comments:
+      - Note that the subject is the food_description_label and the object is food_primary_type_label
+      - 'See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml'
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: skos:exactMatch
+        description: Mappings assessed to indicate a high degree of confidence that the concepts expressed in the subject and object terms can be used interchangeably. In SKOS this is described as following the transitive property.
+      - value: skos:closeMatch
+        description: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable.
+      - value: skos:broadMatch
+        description: Mappings between a subject and object terms, where the object term is above the subject within a concept hierarchy.
+      - value: skos:narrowMatch
+        description: Mappings between a subject and object terms, where the object term that is below the subject within a concept hierarchy.
+      - value: skos:relatedMatch
+        description: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.
+  food_primary_type_label:
+    description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
+    recommended: true
+    comments:
+      - This field is to be used only for the string labels of from controlled vocabulary terms which are mapped to the food_description_label.
+    in_subset:
+      - RecommendedSubset
+    close_mappings:
+      - PTFI:Specimen_Food_Product_Name
+    examples:
+      value: piece of chicken (raw)
+  food_primary_type_scientific_name:
+    description: A string denoting the scientific name, (in binomial nomenclature) of an organism that a food material is primarily composed of.
+    comments: This slot should only be used in cases where food materials are single ingredient foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted anchovies canned in oil".
+    examples:
+      - value: Gallus gallus
+  food_primary_type_cultivar_name:
+    description: A string denoting the cultivar name of the primary food material.
+    examples:
+      - value: Adirondack Blue
+  food_primary_type_animal_breed_name:
+    description: A string denoting the breed name of the primary food material.
+    comments: This slot should only be used in cases where food material is an animal with a recognizable breed name that is managed by a national breed registry, breed association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
+    examples:
+      - value: Wagyu
+  food_primary_type_ncbi_taxon_id:
+    description: A curie from the ontology representation of the NCBI organismal taxonomy (NCBITaxon) describing the taxonomic identifier of the primary food material.
+    comments: To do specify an NCBITaxon curie as the range for the slot.
+    examples:
+      - value: NCBITaxon:9031
+  food_upc_code:
+    description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
     range: string
+    examples:
+      - value: 40822011143
+  food_preservation_state:
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.
+    multivalued: true
+    range: FoodPreservationState
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: "[raw]"
+    #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
+  food_storage_temperature_state:
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition.
+    multivalued: true
+    range: FoodStorageTemperatureState
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: "[frozen]"
+      - value: "[frozen|refrigerated]"
+  food_ripeness_state:
+    description: A value from a enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
+    range: FoodRipenessState
+    examples:
+      - value: unripe
+  food_cooking_method:
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis.
+    range: FoodCookingMethod
+    recommended: true
+    multivalued: true
+    in_subset:
+      - RecommendedSubset
+    examples:
+      value: "[boiled|steamed]"
+  food_origin_country:
+    description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code from which a food sample originates.
+    range: CountryCode
+    examples:
+      - value: AFG
+  food_acquisition_city:
+    description: A string denoting the city in which a food sample was acquired.
+    close_mappings:
+      - PTFI:Collection_Location
+    examples:
+      value: Tucson
+  food_acquisition_country: # See ISO 3166 for country codes
+    description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code from which a food sample was acquired.
+    range: CountryCode
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: AFG
+  food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
+    description: A string denoting the country subdivision (state or province) from which a food sample was acquired.
+    examples:
+      value: PA
+  food_acquisition_date: #TODO add ISO datetime requirement?
+    description: A date value representing the date a food sample was acquired.
+    range: date
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+    exact_mappings:
+      - PTFI:Collection_Date
+    examples:
+      - value: 2023-03-08
+  food_acquisition_year:
+    description: A string value representing the year a food sample was acquired.
+    comments: When possible food_acquisition_date should be used instead of food_acquisition_date_year.
+    examples:
+      - value: 2011
+  food_acquisition_location_type:
+    description: A value from an enumerated set of controlled vocabulary terms describing the type of location from which a food sample was acquired.
+    range: FoodAcquisitionLocationType #Can maybe set default to unknown
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+    exact_mappings:
+      - PTFI:Collection_Type
+    examples:
+      - value: supermarket
+  food_acquisition_location_name:
+    description: A string describing the name of the location from which a food sample was acquired.
+    examples:
+      - value: Safeway
+  food_acquisition_latitude: #TODO add numeric range constraint
+    description: A float representing the latitude of the place from which the food sample was acquired.
+    range: float
+    exact_mappings:
+      - PTFI:Collection_Latitude
+    examples:
+      - value: 25.761681
+  food_acquisition_longitude: #TODO add numeric range constraint
+    description: A float representing the longitude of the place from which the food sample was acquired.
+    range: float
+    exact_mappings:
+      - PTFI:Collection_Longitude
+    examples:
+      - value: -80.191788
+  food_acquisition_agent_name:
+    description: A string denoting the name of the agent (person, device or other type of service) that acquired the food sample.
+    exact_mappings:
+      - PTFI:Collector_Name
+    examples:
+      - value: Denise Trainer
+  food_acquisition_organization:
+    description: A string denoting the name of the organization responsible for acquired the food sample.
+    exact_mappings:
+      - PTFI:Collector_Organization
+    examples:
+      - value: USDA Food for Health of People and the Environment Laboratory
+  food_distributor_city:
+    description: A string denoting the city of a distributor organization from which a food sample was acquired.
+    examples:
+      value: Veracruz
+  food_distributor_country:
+    description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code of a distributor organization from which a food sample was acquired.
+    range: CountryCode
+    examples:
+      - value: AFG
+  food_distributor_country_subdivision:
+    description: A string denoting the country subdivision (state or province) of a distributor organization from which a food sample was acquired.
+    comments: To be determined if state codes should be specified over full names of states/provinces for countries globally.
+    examples:
+      - value: Ohio
+  food_label_date:
+    description: A date value representing the food label date as shown on the labeling information of the food sample.
+    range: date
+    comments: This field can be used in cases where it is unclear if a label date is an expiration date, sell by date, use by or other date on a product label.
+    examples:
+      - value: 2023-03-08
+  food_expiration_date: #TODO add ISO datetime requirement?
+    description: A date value representing the food expiration date as shown on the labeling information of the food sample.
+    range: date
+    examples:
+      - value: 2023-03-08
+  food_sell_by_date:
+    description: A date value representing a date that indicates to stores how long to display a food product for sale for inventory management purposes.
+    range: date
+    comments: Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
+    examples:
+      - value: 2023-03-08
+  food_category_label:
+    description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
+    examples:
+      - value: Beverages
+  food_category_type:
+    description: A controlled vocabulary term representing the category of the food material that was sampled.
+    examples:
+      - value: FOOD:1400
+  food_additional_types:
+    description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
+    multivalued: true
+    examples:
+      - value: "[wheat flour (enriched)|syrup|water|salt]"
+  food_brand_name:
+    description: A string denoting a name identifying a product, service, or organization selling and or distributing the primary food material.
+    examples:
+      - value: Bob's Red Mill
+  food_lot_number:
+    description: A string denoting the identifying lot number number assigned by a manufacturer to a particular quantity, (or lot) of the sampled primary food material.
+    comments: A lot number can also be referred to as lot code.
+    examples:
+      - value: 9500
+  food_label_weight:
+    description: A float denoting the mass, (or weight on earth) as specified on the product label of a sampled primary food material.
+    comments: This field should be used in along with food_acquisition_label_weight_unit to express the units the food_label_weight was measured.
+    range: float
+    examples:
+      - value: 24
+  food_label_weight_unit:
+    description: A unit code representing the unit of measurement in which a food_label_weight is measured.
+    examples:
+      - value: '[oz_av]'
+  food_sample_publication_date:
+    description: A date value representing the date in which a food sample was published.
+    examples:
+      - value: 2020-10-30
+  food_comment:
+    description: A string representing a comment relating to a food sample.
+    examples:
+      - value: "Bananas where green at time of sampling and yellow at the time of analysis."
+  food_sample_weight:
+    description: A float denoting the mass, (or weight on earth) of a food sample.
+    comments: This field should be used in along with food_sample_weight_unit to express the units the food_sample_weight was measured in.
+    range: float
+    examples:
+      - value: 304
+  food_sample_weight_unit:
+    description: A unit code representing the unit of measurement in which a food_sample_weight_unit is measured.
+    examples:
+      - value: 'g'
+  food_sample_digested_weight:
+    description: A float denoting the mass, (or weight on earth) of a food sample after being subject to a chemical or enzymatic digestion process prior to analysis of components of nutritional interest.
+    comments: This field should be used in along with food_sample_digested_weight_unit to express the units the food_sample_digested_weight was measured in.
+    range: float
+    examples:
+      - value: 209
+  food_sample_digested_weight_unit:
+    description: A unit code representing the unit of measurement in which a food_sample_digested_weight is measured.
+    examples:
+      - value: 'g'
 
 enums:
   CompoundAnalyticalMeasurementMethod: # lab_method.csv has list for FDC
