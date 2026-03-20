@@ -675,7 +675,7 @@ slots:
     examples:
       - value: Standard Reference (SR) Legacy
   resource_dataset_version_number:
-    description: An integer corresponding to the version number of MIFC dataset.
+    description: An integer corresponding to the version number of the MIFC dataset.
     range: integer
     required: true
     comments: This could alternatively be modeled as a version tag with a string like with resource_mifc_version_tag.
