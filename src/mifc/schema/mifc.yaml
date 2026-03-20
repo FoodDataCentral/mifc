@@ -28,8 +28,12 @@ imports:
   - linkml:types
 
 subsets:
+  RequiredSubset:
+    title: Required subset
+    description: |-
+      A subset of the MIFC slots that are required for use use in a Food Composition Table/Database.
   RecommendedSubset:
-    title: recommended subset
+    title: Recommended subset
     description: |-
       A subset of the MIFC slots that are required and recommended for use use in a Food Composition Table/Database.
 
@@ -47,6 +51,7 @@ classes:
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     slots: ## Slots specific to foods
       - food_sample_id
@@ -103,6 +108,7 @@ classes:
     is_a: NamedThing
     class_uri: schema:Component
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     slots: ## Slots specific to components of nutritional interest
       - component_sample_id
@@ -141,6 +147,7 @@ classes:
     is_a: NamedThing
     class_uri: schema:Resource
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     slots: ## Slots specific to Resource
       - resource_dataset_label
@@ -178,6 +185,7 @@ slots:
     comments:
       - "Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html"
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: CY121UM
@@ -189,6 +197,7 @@ slots:
     examples:
       - value: Yam, raw
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
   food_primary_type:
     description: A controlled vocabulary term representing the primary food material which was sampled.
@@ -467,6 +476,7 @@ slots:
     required: true
     comments: Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: CY121UM
@@ -489,6 +499,7 @@ slots:
     required: true
     range: float
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: 0.52
@@ -496,6 +507,7 @@ slots:
     description: A unit code representing the unit of measurement in which a component_recorded_value is measured.
     required: true
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     comments: TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended LINKML units docs.
     examples:
@@ -506,6 +518,7 @@ slots:
     range: integer
     comments: This slot defines if component is source from an individual sample, or an aggregated collection of sample (a profile).
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: 7
@@ -657,6 +670,7 @@ slots:
     description: A string corresponding to the labeled name of dataset.
     required: true
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: Standard Reference (SR) Legacy
@@ -666,6 +680,7 @@ slots:
     required: true
     comments: This could alternatively be modeled as a version tag with a string like with resource_mifc_version_tag.
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: 2
@@ -674,6 +689,7 @@ slots:
     required: true
     range: ResourceMIFCVersionTag
     in_subset:
+      - RequiredSubset
       - RecommendedSubset
     examples:
       - value: v0.3.0
