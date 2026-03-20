@@ -667,7 +667,7 @@ slots:
 
   # Resource slots
   resource_dataset_label:
-    description: A string corresponding to the labeled name of dataset.
+    description: A string corresponding to the labeled name of the dataset.
     required: true
     in_subset:
       - RequiredSubset
