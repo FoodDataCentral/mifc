@@ -685,7 +685,7 @@ slots:
     examples:
       - value: 2
   resource_mifc_version_tag:
-    description: A value from a enumerated set of controlled vocabulary terms representing a string corresponding to a named MIFC release number.
+    description: A value from an enumerated set of controlled vocabulary terms representing a string corresponding to a named MIFC release number.
     required: true
     range: ResourceMIFCVersionTag
     in_subset:
