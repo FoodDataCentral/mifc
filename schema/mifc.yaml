@@ -2613,7 +2613,7 @@ slots:
   resource_dataset_label:
     name: resource_dataset_label
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_label
-    description: A string corresponding to the labeled name of dataset.
+    description: A string corresponding to the labeled name of the dataset.
     examples:
     - value: Standard Reference (SR) Legacy
     in_subset:
@@ -2894,7 +2894,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-03-20T11:04:56'
-source_file_size: 46860
-generation_date: '2026-03-20T11:05:06'
+source_file_date: '2026-03-20T11:19:03'
+source_file_size: 46864
+generation_date: '2026-03-20T11:19:14'
 
