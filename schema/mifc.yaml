@@ -2629,7 +2629,7 @@ slots:
   resource_dataset_version_number:
     name: resource_dataset_version_number
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_version_number
-    description: An integer corresponding to the version number of MIFC dataset.
+    description: An integer corresponding to the version number of the MIFC dataset.
     comments:
     - This could alternatively be modeled as a version tag with a string like with
       resource_mifc_version_tag.
@@ -2648,7 +2648,7 @@ slots:
   resource_mifc_version_tag:
     name: resource_mifc_version_tag
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_mifc_version_tag
-    description: A value from a enumerated set of controlled vocabulary terms representing
+    description: A value from an enumerated set of controlled vocabulary terms representing
       a string corresponding to a named MIFC release number.
     examples:
     - value: v0.3.0
@@ -2894,7 +2894,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-03-20T11:19:03'
-source_file_size: 46864
-generation_date: '2026-03-20T11:19:14'
+source_file_date: '2026-03-20T11:21:40'
+source_file_size: 46869
+generation_date: '2026-03-20T11:21:50'
 
