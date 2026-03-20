@@ -47,12 +47,19 @@ prefixes:
 default_prefix: mifc
 default_range: string
 subsets:
+  RequiredSubset:
+    name: RequiredSubset
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/RequiredSubset
+    description: A subset of the MIFC slots that are required for use use in a Food
+      Composition Table/Database.
+    title: Required subset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
   RecommendedSubset:
     name: RecommendedSubset
     definition_uri: https://w3id.org/FoodDataCentral/mifc/RecommendedSubset
     description: A subset of the MIFC slots that are required and recommended for
       use use in a Food Composition Table/Database.
-    title: recommended subset
+    title: Recommended subset
     from_schema: https://w3id.org/FoodDataCentral/mifc
 types:
   string:
@@ -1420,6 +1427,7 @@ slots:
     examples:
     - value: CY121UM
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:food_sample_id
@@ -1440,6 +1448,7 @@ slots:
     examples:
     - value: Yam, raw
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:food_description_label
@@ -2123,6 +2132,7 @@ slots:
     examples:
     - value: CY121UM
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_sample_id
@@ -2171,6 +2181,7 @@ slots:
     examples:
     - value: '0.52'
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_recorded_value
@@ -2190,6 +2201,7 @@ slots:
     examples:
     - value: g/(100.g)
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_measurement_unit
@@ -2209,6 +2221,7 @@ slots:
     examples:
     - value: '7'
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_data_points_number
@@ -2604,6 +2617,7 @@ slots:
     examples:
     - value: Standard Reference (SR) Legacy
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:resource_dataset_label
@@ -2622,6 +2636,7 @@ slots:
     examples:
     - value: '2'
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:resource_dataset_version_number
@@ -2638,6 +2653,7 @@ slots:
     examples:
     - value: v0.3.0
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:resource_mifc_version_tag
@@ -2736,6 +2752,7 @@ classes:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/Food
     description: Metadata about foods analyzed for components of nutritional interest.
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     mappings:
@@ -2793,6 +2810,7 @@ classes:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/Component
     description: Metadata about components of nutritional interest measured from foods.
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     mappings:
@@ -2834,6 +2852,7 @@ classes:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/Resource
     description: Supplemental data about the provenance of MIFC collection resources.
     in_subset:
+    - RequiredSubset
     - RecommendedSubset
     from_schema: https://w3id.org/FoodDataCentral/mifc
     mappings:
@@ -2875,7 +2894,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-02-27T10:45:42'
-source_file_size: 46418
-generation_date: '2026-02-27T10:45:54'
+source_file_date: '2026-03-20T11:04:56'
+source_file_size: 46860
+generation_date: '2026-03-20T11:05:06'
 
