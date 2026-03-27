@@ -2613,7 +2613,7 @@ slots:
   resource_dataset_label:
     name: resource_dataset_label
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_label
-    description: A string corresponding to the labeled name of dataset.
+    description: A string corresponding to the labeled name of the dataset.
     examples:
     - value: Standard Reference (SR) Legacy
     in_subset:
@@ -2629,7 +2629,7 @@ slots:
   resource_dataset_version_number:
     name: resource_dataset_version_number
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_version_number
-    description: An integer corresponding to the version number of MIFC dataset.
+    description: An integer corresponding to the version number of the MIFC dataset.
     comments:
     - This could alternatively be modeled as a version tag with a string like with
       resource_mifc_version_tag.
@@ -2648,7 +2648,7 @@ slots:
   resource_mifc_version_tag:
     name: resource_mifc_version_tag
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_mifc_version_tag
-    description: A value from a enumerated set of controlled vocabulary terms representing
+    description: A value from an enumerated set of controlled vocabulary terms representing
       a string corresponding to a named MIFC release number.
     examples:
     - value: v0.3.0
@@ -2894,7 +2894,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-03-20T12:02:38'
-source_file_size: 46860
-generation_date: '2026-03-20T12:04:56'
+source_file_date: '2026-03-20T12:20:58'
+source_file_size: 46869
+generation_date: '2026-03-27T14:13:27'
 
