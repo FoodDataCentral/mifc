@@ -115,6 +115,7 @@ classes:
       - component_description_label
       - component_type
       - component_type_label
+      - component_description_match_type
       - component_recorded_value
       - component_measurement_unit
       - component_data_points_number
@@ -503,6 +504,26 @@ slots:
       - RecommendedSubset
     examples:
       - value: Ash
+  component_description_match_type:
+    description: A value from a controlled vocabulary term representing the type of mapping between the component_description_label and component_type_label.
+    recommended: true
+    range: SkosMatchType
+    comments:
+      - Note that the subject is the component_description_label and the object is component_type_label
+      - 'See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml'
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: skos:exactMatch
+        description: Mappings assessed to indicate a high degree of confidence that the concepts expressed in the subject and object terms can be used interchangeably. In SKOS this is described as following the transitive property.
+      - value: skos:closeMatch
+        description: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable.
+      - value: skos:broadMatch
+        description: Mappings between a subject and object terms, where the object term is above the subject within a concept hierarchy.
+      - value: skos:narrowMatch
+        description: Mappings between a subject and object terms, where the object term that is below the subject within a concept hierarchy.
+      - value: skos:relatedMatch
+        description: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.
   component_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
     description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
     required: true
