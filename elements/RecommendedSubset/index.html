@@ -486,7 +486,7 @@
 </tr>
 <tr>
 <td><a href="../component_data_points_number/">component_data_points_number</a></td>
-<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
 <td>An integer representing the number of individual samples that comprise a comp...</td>
 </tr>
 <tr>
@@ -496,22 +496,27 @@
 </tr>
 <tr>
 <td><a href="../component_description_label/">component_description_label</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string clearly and unambiguous describing an analyzed component of nutritio...</td>
 </tr>
 <tr>
+<td><a href="../component_description_match_type/">component_description_match_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../SkosMatchType/">SkosMatchType</a></td>
+<td>A value from a controlled vocabulary term representing the type of mapping be...</td>
+</tr>
+<tr>
 <td><a href="../component_measurement_unit/">component_measurement_unit</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A unit code representing the unit of measurement in which a component_recorde...</td>
 </tr>
 <tr>
 <td><a href="../component_recorded_value/">component_recorded_value</a></td>
-<td>1 <br/> <a href="../Float/">Float</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../Float/">Float</a></td>
 <td>A float representing a recorded value of a component of nutritional interest ...</td>
 </tr>
 <tr>
 <td><a href="../component_sample_id/">component_sample_id</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string denoting the primary identifier for a sample of the class Component</td>
 </tr>
 <tr>
@@ -568,7 +573,7 @@
 </tr>
 <tr>
 <td><a href="../food_description_label/">food_description_label</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string clearly and unambiguous describing the sampled primary food material...</td>
 </tr>
 <tr>
@@ -593,7 +598,7 @@
 </tr>
 <tr>
 <td><a href="../food_sample_id/">food_sample_id</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string denoting the primary identifier for a sample of the class Food</td>
 </tr>
 <tr>
@@ -620,17 +625,17 @@
 </tr>
 <tr>
 <td><a href="../resource_dataset_label/">resource_dataset_label</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to the labeled name of the dataset</td>
 </tr>
 <tr>
 <td><a href="../resource_dataset_version_number/">resource_dataset_version_number</a></td>
-<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
 <td>An integer corresponding to the version number of the MIFC dataset</td>
 </tr>
 <tr>
 <td><a href="../resource_mifc_version_tag/">resource_mifc_version_tag</a></td>
-<td>1 <br/> <a href="../ResourceMIFCVersionTag/">ResourceMIFCVersionTag</a></td>
+<td>1 <em>recommended</em> <br/> <a href="../ResourceMIFCVersionTag/">ResourceMIFCVersionTag</a></td>
 <td>A value from an enumerated set of controlled vocabulary terms representing a ...</td>
 </tr>
 <tr>
@@ -668,6 +673,10 @@
 <tr>
 <td><a href="../component_description_label/">component_description_label</a></td>
 <td>A string clearly and unambiguous describing an analyzed component of nutritio...</td>
+</tr>
+<tr>
+<td><a href="../component_description_match_type/">component_description_match_type</a></td>
+<td>A value from a controlled vocabulary term representing the type of mapping be...</td>
 </tr>
 <tr>
 <td><a href="../component_measurement_unit/">component_measurement_unit</a></td>
