@@ -112,6 +112,7 @@ classes:
       - RecommendedSubset
     slots: ## Slots specific to components of nutritional interest
       - component_sample_id
+      - component_description_label
       - component_type
       - component_type_label
       - component_recorded_value
@@ -480,6 +481,14 @@ slots:
       - RecommendedSubset
     examples:
       - value: CY121UM
+  component_description_label:
+    description: A string clearly and unambiguous describing an analyzed component of nutritional interest analyzed from a food sample.
+    required: true
+    in_subset:
+      - RequiredSubset
+      - RecommendedSubset
+    examples:
+      - value: Acetic acid
   component_type:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
     recommended: true
