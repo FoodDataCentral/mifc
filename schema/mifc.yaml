@@ -2141,6 +2141,23 @@ slots:
     - Component
     range: string
     required: true
+  component_description_label:
+    name: component_description_label
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_description_label
+    description: A string clearly and unambiguous describing an analyzed component
+      of nutritional interest analyzed from a food sample.
+    examples:
+    - value: Acetic acid
+    in_subset:
+    - RequiredSubset
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_description_label
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+    required: true
   component_type:
     name: component_type
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_type
@@ -2818,6 +2835,7 @@ classes:
     is_a: NamedThing
     slots:
     - component_sample_id
+    - component_description_label
     - component_type
     - component_type_label
     - component_recorded_value
@@ -2894,7 +2912,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-01T13:17:10'
-source_file_size: 46869
-generation_date: '2026-04-01T13:17:21'
+source_file_date: '2026-04-02T10:29:01'
+source_file_size: 47196
+generation_date: '2026-04-02T10:29:13'
 

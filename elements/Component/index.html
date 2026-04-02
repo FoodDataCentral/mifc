@@ -291,6 +291,8 @@
 
       Component : component_derivation_type
 
+      Component : component_description_label
+
       Component : component_limit_of_blank
 
       Component : component_limit_of_detection
@@ -366,6 +368,12 @@
 <td><a href="../component_sample_id/">component_sample_id</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting the primary identifier for a sample of the class Component</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_description_label/">component_description_label</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string clearly and unambiguous describing an analyzed component of nutritio...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -594,6 +602,7 @@ from_schema: https://w3id.org/FoodDataCentral/mifc
 is_a: NamedThing
 slots:
 - component_sample_id
+- component_description_label
 - component_type
 - component_type_label
 - component_recorded_value
@@ -652,6 +661,23 @@ attributes:
     from_schema: https://w3id.org/FoodDataCentral/mifc
     rank: 1000
     alias: component_sample_id
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+    required: true
+  component_description_label:
+    name: component_description_label
+    description: A string clearly and unambiguous describing an analyzed component
+      of nutritional interest analyzed from a food sample.
+    examples:
+    - value: Acetic acid
+    in_subset:
+    - RequiredSubset
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_description_label
     owner: Component
     domain_of:
     - Component
