@@ -182,6 +182,7 @@ slots:
   food_sample_id:
     description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
     required: true
+    recommended: true
     range: string
     #identifier: true # Forces food_sample_id keys to be unique
     comments:
@@ -194,6 +195,7 @@ slots:
   food_description_label:
     description: A string clearly and unambiguous describing the sampled primary food material, in accordance with globally accepted guidelines for the description of foods.
     required: true
+    recommended: true
     comments:
       - "For reference see book by Greenfield and Southgate 'Food Composition Data: Production Management and Use' ISBN-10 9251049491 and cited literature"
     examples:
@@ -203,6 +205,7 @@ slots:
       - RecommendedSubset
   food_primary_type:
     description: A controlled vocabulary term representing the primary food material which was sampled.
+    recommended: true
     comments:
       - The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
     examples:
@@ -210,7 +213,6 @@ slots:
     slot_uri: schema:name
     exact_mappings:
       - FDC:NDB_number
-    recommended: true
     in_subset:
       - RecommendedSubset
   food_description_match_type:
@@ -270,9 +272,9 @@ slots:
       - value: 40822011143
   food_preservation_state:
     description: One or multiple values from an enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.
+    recommended: true
     multivalued: true
     range: FoodPreservationState
-    recommended: true
     in_subset:
       - RecommendedSubset
     examples:
@@ -280,9 +282,9 @@ slots:
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
     description: One or multiple values from an enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition.
+    recommended: true
     multivalued: true
     range: FoodStorageTemperatureState
-    recommended: true
     in_subset:
       - RecommendedSubset
     examples:
@@ -295,8 +297,8 @@ slots:
       - value: unripe
   food_cooking_method:
     description: One or multiple values from an enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis.
-    range: FoodCookingMethod
     recommended: true
+    range: FoodCookingMethod
     multivalued: true
     in_subset:
       - RecommendedSubset
@@ -315,8 +317,8 @@ slots:
       value: Tucson
   food_acquisition_country: # See ISO 3166 for country codes
     description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code from which a food sample was acquired.
-    range: CountryCode
     recommended: true
+    range: CountryCode
     in_subset:
       - RecommendedSubset
     examples:
@@ -327,8 +329,8 @@ slots:
       value: PA
   food_acquisition_date: #TODO add ISO datetime requirement?
     description: A date value representing the date a food sample was acquired.
-    range: date
     recommended: true
+    range: date
     in_subset:
       - RecommendedSubset
     exact_mappings:
@@ -476,6 +478,7 @@ slots:
   component_sample_id:
     description: A string denoting the primary identifier for a sample of the class Component.
     required: true
+    recommended: true
     comments: Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
     in_subset:
       - RequiredSubset
@@ -485,6 +488,7 @@ slots:
   component_description_label:
     description: A string clearly and unambiguous describing an analyzed component of nutritional interest analyzed from a food sample.
     required: true
+    recommended: true
     in_subset:
       - RequiredSubset
       - RecommendedSubset
@@ -527,6 +531,7 @@ slots:
   component_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
     description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
     required: true
+    recommended: true
     range: float
     in_subset:
       - RequiredSubset
@@ -536,6 +541,7 @@ slots:
   component_measurement_unit:
     description: A unit code representing the unit of measurement in which a component_recorded_value is measured.
     required: true
+    recommended: true
     in_subset:
       - RequiredSubset
       - RecommendedSubset
@@ -545,6 +551,7 @@ slots:
   component_data_points_number: # TODO add default 1 perhaps with if absent
     description: An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.
     required: true
+    recommended: true
     range: integer
     comments: This slot defines if component is source from an individual sample, or an aggregated collection of sample (a profile).
     in_subset:
@@ -569,8 +576,8 @@ slots:
       - value: Unknown manufacturer
   component_analysis_date:
     description: A date value representing the date in which a component of nutritional interest was analyzed.
-    range: date
     recommended: true
+    range: date
     in_subset:
       - RecommendedSubset
     examples:
@@ -699,6 +706,7 @@ slots:
   resource_dataset_label:
     description: A string corresponding to the labeled name of the dataset.
     required: true
+    recommended: true
     in_subset:
       - RequiredSubset
       - RecommendedSubset
@@ -706,8 +714,9 @@ slots:
       - value: Standard Reference (SR) Legacy
   resource_dataset_version_number:
     description: An integer corresponding to the version number of the MIFC dataset.
-    range: integer
     required: true
+    recommended: true
+    range: integer
     comments: This could alternatively be modeled as a version tag with a string like with resource_mifc_version_tag.
     in_subset:
       - RequiredSubset
@@ -717,6 +726,7 @@ slots:
   resource_mifc_version_tag:
     description: A value from an enumerated set of controlled vocabulary terms representing a string corresponding to a named MIFC release number.
     required: true
+    recommended: true
     range: ResourceMIFCVersionTag
     in_subset:
       - RequiredSubset
