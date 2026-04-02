@@ -1436,6 +1436,7 @@ slots:
     - Food
     range: string
     required: true
+    recommended: true
   food_description_label:
     name: food_description_label
     definition_uri: https://w3id.org/FoodDataCentral/mifc/food_description_label
@@ -1457,6 +1458,7 @@ slots:
     - Food
     range: string
     required: true
+    recommended: true
   food_primary_type:
     name: food_primary_type
     definition_uri: https://w3id.org/FoodDataCentral/mifc/food_primary_type
@@ -2141,6 +2143,25 @@ slots:
     - Component
     range: string
     required: true
+    recommended: true
+  component_description_label:
+    name: component_description_label
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_description_label
+    description: A string clearly and unambiguous describing an analyzed component
+      of nutritional interest analyzed from a food sample.
+    examples:
+    - value: Acetic acid
+    in_subset:
+    - RequiredSubset
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_description_label
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+    required: true
+    recommended: true
   component_type:
     name: component_type
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_type
@@ -2173,6 +2194,40 @@ slots:
     - Component
     range: string
     recommended: true
+  component_description_match_type:
+    name: component_description_match_type
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_description_match_type
+    description: A value from a controlled vocabulary term representing the type of
+      mapping between the component_description_label and component_type_label.
+    comments:
+    - Note that the subject is the component_description_label and the object is component_type_label
+    - See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml
+    examples:
+    - value: skos:exactMatch
+      description: Mappings assessed to indicate a high degree of confidence that
+        the concepts expressed in the subject and object terms can be used interchangeably.
+        In SKOS this is described as following the transitive property.
+    - value: skos:closeMatch
+      description: Mappings between the subject and object terms that convey a high
+        degree of similarity, but are not exactly the same or interchangeable.
+    - value: skos:broadMatch
+      description: Mappings between a subject and object terms, where the object term
+        is above the subject within a concept hierarchy.
+    - value: skos:narrowMatch
+      description: Mappings between a subject and object terms, where the object term
+        that is below the subject within a concept hierarchy.
+    - value: skos:relatedMatch
+      description: Mappings between subject and object terms that might have some
+        association but are not clearly not referring to the the same or similar concepts.
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_description_match_type
+    owner: Component
+    domain_of:
+    - Component
+    range: SkosMatchType
+    recommended: true
   component_recorded_value:
     name: component_recorded_value
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_recorded_value
@@ -2190,6 +2245,7 @@ slots:
     - Component
     range: float
     required: true
+    recommended: true
   component_measurement_unit:
     name: component_measurement_unit
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_measurement_unit
@@ -2210,6 +2266,7 @@ slots:
     - Component
     range: string
     required: true
+    recommended: true
   component_data_points_number:
     name: component_data_points_number
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_data_points_number
@@ -2230,6 +2287,7 @@ slots:
     - Component
     range: integer
     required: true
+    recommended: true
   component_record_date:
     name: component_record_date
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_record_date
@@ -2626,6 +2684,7 @@ slots:
     - Resource
     range: string
     required: true
+    recommended: true
   resource_dataset_version_number:
     name: resource_dataset_version_number
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_version_number
@@ -2645,6 +2704,7 @@ slots:
     - Resource
     range: integer
     required: true
+    recommended: true
   resource_mifc_version_tag:
     name: resource_mifc_version_tag
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_mifc_version_tag
@@ -2662,6 +2722,7 @@ slots:
     - Resource
     range: ResourceMIFCVersionTag
     required: true
+    recommended: true
   resource_contributor_orcid:
     name: resource_contributor_orcid
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_contributor_orcid
@@ -2818,8 +2879,10 @@ classes:
     is_a: NamedThing
     slots:
     - component_sample_id
+    - component_description_label
     - component_type
     - component_type_label
+    - component_description_match_type
     - component_recorded_value
     - component_measurement_unit
     - component_data_points_number
@@ -2894,7 +2957,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-03-20T12:20:58'
-source_file_size: 46869
-generation_date: '2026-03-27T14:13:27'
+source_file_date: '2026-04-02T12:44:05'
+source_file_size: 48973
+generation_date: '2026-04-02T12:46:23'
 
