@@ -829,10 +829,14 @@ enums:
       ultraviolet light exposed:
   FoodStorageTemperatureState:
     permissible_values:
+      ambient:
+        description: Typically defined as between 20-25 degrees Celcius.
       chilled:
       foodsafe chilled:
       frozen:
       refrigerated:
+      uncontrolled:
+        description: Storage conditions which not temperature is not controlled and which may be subject to deviations from an ambient temperature range.
   FoodRipenessState:
     permissible_values:
       ripe:
