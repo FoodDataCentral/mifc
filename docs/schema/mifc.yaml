@@ -465,6 +465,9 @@ enums:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/FoodStorageTemperatureState
     from_schema: https://w3id.org/FoodDataCentral/mifc
     permissible_values:
+      ambient:
+        text: ambient
+        description: Typically defined as between 20-25 degrees Celsius.
       chilled:
         text: chilled
       foodsafe chilled:
@@ -473,6 +476,10 @@ enums:
         text: frozen
       refrigerated:
         text: refrigerated
+      uncontrolled:
+        text: uncontrolled
+        description: Storage conditions which not temperature is not controlled and
+          which may be subject to deviations from an ambient temperature range.
   FoodRipenessState:
     name: FoodRipenessState
     definition_uri: https://w3id.org/FoodDataCentral/mifc/FoodRipenessState
@@ -2957,7 +2964,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-02T12:44:05'
-source_file_size: 48973
-generation_date: '2026-04-02T12:46:23'
+source_file_date: '2026-04-08T14:45:17'
+source_file_size: 49235
+generation_date: '2026-04-08T14:46:28'
 
