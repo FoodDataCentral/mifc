@@ -614,7 +614,7 @@ enums:
         description: Mappings between the subject and object terms that convey a high
           degree of similarity, but are not exactly the same or interchangeable. Assignments
           of closeMatch should only be used when there is no appropriate broadMatch
-          or narrowMatch to be found within the subject and object vocabulaires.
+          or narrowMatch to be found within the subject and object vocabularies.
         meaning: skos:closeMatch
         comments:
         - 'From the sssom_schema: The subject and the object are sufficiently similar
@@ -2697,7 +2697,7 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_version_number
     description: An integer corresponding to the version number of the MIFC dataset.
     comments:
-    - This could alternatively be modeled as a version tag with a string like with
+    - This could alternatively be modelled as a version tag with a string like with
       resource_mifc_version_tag.
     examples:
     - value: '2'
@@ -2964,7 +2964,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-08T14:45:17'
-source_file_size: 49235
-generation_date: '2026-04-08T14:46:28'
+source_file_date: '2026-04-08T15:13:16'
+source_file_size: 49236
+generation_date: '2026-04-08T15:15:12'
 
