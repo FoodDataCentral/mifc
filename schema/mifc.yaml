@@ -467,7 +467,7 @@ enums:
     permissible_values:
       ambient:
         text: ambient
-        description: Typically defined as between 20-25 degrees Celcius.
+        description: Typically defined as between 20-25 degrees Celsius.
       chilled:
         text: chilled
       foodsafe chilled:
@@ -2964,7 +2964,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-07T13:24:20'
+source_file_date: '2026-04-08T12:47:39'
 source_file_size: 49235
-generation_date: '2026-04-07T13:24:30'
+generation_date: '2026-04-08T12:47:49'
 
