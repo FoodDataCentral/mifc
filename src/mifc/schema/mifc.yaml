@@ -393,9 +393,9 @@ slots:
       - value: AFG
   food_distributor_country_subdivision:
     description: A string denoting the country subdivision (state or province) of a distributor organization from which a food sample was acquired.
-    comments: To be determined if state codes should be specified over full names of states/provinces for countries globally.
     examples:
       - value: Ohio
+    notes: To be determined if state codes should be specified over full names of states/provinces for countries globally.
   food_label_date:
     description: A date value representing the food label date as shown on the labeling information of the food sample.
     range: date
