@@ -830,7 +830,7 @@ enums:
   FoodStorageTemperatureState:
     permissible_values:
       ambient:
-        description: Typically defined as between 20-25 degrees Celcius.
+        description: Typically defined as between 20-25 degrees Celsius.
       chilled:
       foodsafe chilled:
       frozen:
