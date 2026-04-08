@@ -184,14 +184,14 @@ slots:
     required: true
     recommended: true
     range: string
-    #identifier: true # Forces food_sample_id keys to be unique
-    comments:
-      - "Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html"
     in_subset:
       - RequiredSubset
       - RecommendedSubset
     examples:
       - value: CY121UM
+    notes:
+      - "Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html"
+      - "identifier: true # Forces food_sample_id keys to be unique"
   food_description_label:
     description: A string clearly and unambiguous describing the sampled primary food material, in accordance with globally accepted guidelines for the description of foods.
     required: true
@@ -262,7 +262,7 @@ slots:
       - value: Wagyu
   food_primary_type_ncbi_taxon_id:
     description: A curie from the ontology representation of the NCBI organismal taxonomy (NCBITaxon) describing the taxonomic identifier of the primary food material.
-    comments: To do specify an NCBITaxon curie as the range for the slot.
+    range: uriorcurie
     examples:
       - value: NCBITaxon:9031
   food_upc_code:
