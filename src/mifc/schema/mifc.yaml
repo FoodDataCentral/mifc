@@ -926,11 +926,7 @@ enums:
           - 'Only use if no applicable broad or narrow matches can be found in the vocabulary.'
   ResourceMIFCVersionTag:
     permissible_values:
-      v0.1.0:
-      v0.2.0:
-      v0.3.0:
-      v0.3.1:
-      v0.3.2:
+      v1.0.0:
   CountryCode:
     comments: Source https://www.nationsonline.org/oneworld/country_code_list.htm
     permissible_values:
