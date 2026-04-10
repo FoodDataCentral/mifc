@@ -6,6 +6,13 @@
 
 Welcome to the USDA [Food DataCentral (FDC)](https://fdc.nal.usda.gov/) **M**inimum **I**nformation (about any) **F**ood **C**omposition (**MIFC**) GitHub repository. The USDA FDC MIFC is a Minimum Information Standard (MIS), serving as a standardized reporting framework to structure food composition data. MIFC defines a set of reporting requirements, a "checklist" of required, recommended, and optional data attributes in a precisely specified reporting format. The MIFC data model is implemented in the [Linked Modeling Language (LinkML)](https://linkml.io/).
 
+## Accessing and using MIFC
+
+The excel versions of the **MIFC** schema, example data and template are available as follows:
+
+* [MIFC_excel_schema](release/MIFC_excel_schema_v1.0.0.xlsx)
+* [MIFC_example_data](release/MIFC_example_data_v1.0.0.xlsx)
+* [MIFC_template](release/MIFC_template_v1.0.0.xlsx)
 
 ## Documentation Website
 
