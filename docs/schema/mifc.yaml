@@ -2250,7 +2250,7 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_measurement_unit
     description: A unit code representing the unit of measurement in which a component_recorded_value
       is measured.
-    comments:
+    notes:
     - TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended
       LINKML units docs.
     examples:
@@ -2956,7 +2956,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-10T17:12:23'
-source_file_size: 49149
-generation_date: '2026-04-10T17:19:56'
+source_file_date: '2026-04-10T17:27:04'
+source_file_size: 49146
+generation_date: '2026-04-10T17:27:47'
 
