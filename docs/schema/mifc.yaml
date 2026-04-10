@@ -1,5 +1,6 @@
 name: mifc
-description: The Minimum Information (about any) Food Composition (MIFC) data standard.
+description: The USDA Food DataCentral Minimum Information (about any) Food Composition
+  (MIFC) data standard.
 title: mifc
 see_also:
 - https://FoodDataCentral.github.io/mifc
@@ -1429,8 +1430,9 @@ slots:
       Food. Note that food_sample_id should be unique in a given dataset and should
       be used to relate Food and Component records via component_sample_id from the
       Component class.
-    comments:
+    notes:
     - 'Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html'
+    - 'identifier: true # Forces food_sample_id keys to be unique'
     examples:
     - value: CY121UM
     in_subset:
@@ -1594,8 +1596,6 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/food_primary_type_ncbi_taxon_id
     description: A curie from the ontology representation of the NCBI organismal taxonomy
       (NCBITaxon) describing the taxonomic identifier of the primary food material.
-    comments:
-    - To do specify an NCBITaxon curie as the range for the slot.
     examples:
     - value: NCBITaxon:9031
     from_schema: https://w3id.org/FoodDataCentral/mifc
@@ -1603,7 +1603,7 @@ slots:
     owner: Food
     domain_of:
     - Food
-    range: string
+    range: uriorcurie
   food_upc_code:
     name: food_upc_code
     definition_uri: https://w3id.org/FoodDataCentral/mifc/food_upc_code
@@ -1894,7 +1894,7 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/food_distributor_country_subdivision
     description: A string denoting the country subdivision (state or province) of
       a distributor organization from which a food sample was acquired.
-    comments:
+    notes:
     - To be determined if state codes should be specified over full names of states/provinces
       for countries globally.
     examples:
@@ -2964,7 +2964,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-08T15:13:16'
-source_file_size: 49236
-generation_date: '2026-04-08T15:15:12'
+source_file_date: '2026-04-10T16:27:35'
+source_file_size: 49205
+generation_date: '2026-04-10T16:28:40'
 
