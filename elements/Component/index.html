@@ -791,7 +791,7 @@ attributes:
     name: component_measurement_unit
     description: A unit code representing the unit of measurement in which a component_recorded_value
       is measured.
-    comments:
+    notes:
     - TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended
       LINKML units docs.
     examples:
@@ -903,7 +903,7 @@ attributes:
     name: component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated.
-    comments:
+    notes:
     - Should make an enumeration with appropriate values (e.g, Analytical as default,
       Calculated, inferred/Estimated, Sourced from literature etc)
     examples:
@@ -1109,7 +1109,7 @@ attributes:
     name: component_quality_control_remeasurement
     description: A boolean value denoting TRUE if a component_recorded_value was measured
       more than once for internal laboratory quality control purposes.
-    comments:
+    notes:
     - This could be alternatively be modeled with an integer rather than a boolean.
       Note this might give some issues with the way excel saves boolean values.
     examples:

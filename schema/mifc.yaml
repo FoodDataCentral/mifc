@@ -2250,7 +2250,7 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_measurement_unit
     description: A unit code representing the unit of measurement in which a component_recorded_value
       is measured.
-    comments:
+    notes:
     - TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended
       LINKML units docs.
     examples:
@@ -2362,7 +2362,7 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated.
-    comments:
+    notes:
     - Should make an enumeration with appropriate values (e.g, Analytical as default,
       Calculated, inferred/Estimated, Sourced from literature etc)
     examples:
@@ -2568,7 +2568,7 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_quality_control_remeasurement
     description: A boolean value denoting TRUE if a component_recorded_value was measured
       more than once for internal laboratory quality control purposes.
-    comments:
+    notes:
     - This could be alternatively be modeled with an integer rather than a boolean.
       Note this might give some issues with the way excel saves boolean values.
     examples:
@@ -2688,9 +2688,6 @@ slots:
     name: resource_dataset_version_number
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_version_number
     description: An integer corresponding to the version number of the MIFC dataset.
-    comments:
-    - This could alternatively be modelled as a version tag with a string like with
-      resource_mifc_version_tag.
     examples:
     - value: '2'
     in_subset:
@@ -2956,7 +2953,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-10T15:20:42'
-source_file_size: 49149
-generation_date: '2026-04-10T15:20:51'
+source_file_date: '2026-04-10T16:06:05'
+source_file_size: 49021
+generation_date: '2026-04-10T16:06:17'
 
