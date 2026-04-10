@@ -358,17 +358,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Comments
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -483,10 +472,6 @@ Alias: food_sample_id</p>
 </tr>
 </tbody>
 </table>
-<h2 id="comments">Comments</h2>
-<ul>
-<li>Instead of <code>identifier: true</code> perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html</li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -519,8 +504,9 @@ description: A string denoting the primary identifier for a sample of the class 
   Note that food_sample_id should be unique in a given dataset and should be used
   to relate Food and Component records via component_sample_id from the Component
   class.
-comments:
+notes:
 - 'Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html'
+- 'identifier: true # Forces food_sample_id keys to be unique'
 examples:
 - value: CY121UM
 in_subset:
