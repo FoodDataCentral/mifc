@@ -545,7 +545,7 @@ slots:
     in_subset:
       - RequiredSubset
       - RecommendedSubset
-    comments: TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended LINKML units docs.
+    notes: TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended LINKML units docs.
     examples:
       - value: g/(100.g)
   component_data_points_number: # TODO add default 1 perhaps with if absent
