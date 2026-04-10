@@ -9,7 +9,7 @@ Welcome to the USDA [Food DataCentral (FDC)](https://fdc.nal.usda.gov/) **M**ini
 
 ## Documentation Website
 
-[https://FoodDataCentral.github.io/mifc](https://FoodDataCentral.github.io/mifc)
+[https://FoodDataCentral.github.io/mifc](https://FoodDataCentral.github.io/mifc/elements)
 
 ## Repository Structure
 
