@@ -717,7 +717,6 @@ slots:
     required: true
     recommended: true
     range: integer
-    comments: This could alternatively be modelled as a version tag with a string like with resource_mifc_version_tag.
     in_subset:
       - RequiredSubset
       - RecommendedSubset
