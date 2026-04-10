@@ -590,7 +590,7 @@ slots:
   component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how a component of nutritional interest was generated.
     recommended: true
-    comments: Should make an enumeration with appropriate values (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature etc)
+    notes: Should make an enumeration with appropriate values (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature etc)
     in_subset:
       - RecommendedSubset
     examples:
