@@ -1,5 +1,6 @@
 name: mifc
-description: The Minimum Information (about any) Food Composition (MIFC) data standard.
+description: The USDA Food DataCentral Minimum Information (about any) Food Composition
+  (MIFC) data standard.
 title: mifc
 see_also:
 - https://FoodDataCentral.github.io/mifc
@@ -2963,7 +2964,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-10T14:25:21'
-source_file_size: 49183
-generation_date: '2026-04-10T14:25:32'
+source_file_date: '2026-04-10T14:30:17'
+source_file_size: 49205
+generation_date: '2026-04-10T14:30:28'
 
