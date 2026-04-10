@@ -664,16 +664,8 @@ enums:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/ResourceMIFCVersionTag
     from_schema: https://w3id.org/FoodDataCentral/mifc
     permissible_values:
-      v0.1.0:
-        text: v0.1.0
-      v0.2.0:
-        text: v0.2.0
-      v0.3.0:
-        text: v0.3.0
-      v0.3.1:
-        text: v0.3.1
-      v0.3.2:
-        text: v0.3.2
+      v1.0.0:
+        text: v1.0.0
   CountryCode:
     name: CountryCode
     definition_uri: https://w3id.org/FoodDataCentral/mifc/CountryCode
@@ -2964,7 +2956,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-10T16:27:35'
-source_file_size: 49205
-generation_date: '2026-04-10T16:28:40'
+source_file_date: '2026-04-10T17:12:23'
+source_file_size: 49149
+generation_date: '2026-04-10T17:19:56'
 
