@@ -667,7 +667,7 @@ slots:
       - value: Covance
   component_quality_control_remeasurement:
     description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
-    comments: This could be alternatively be modeled with an integer rather than a boolean. Note this might give some issues with the way excel saves boolean values.
+    notes: This could be alternatively be modeled with an integer rather than a boolean. Note this might give some issues with the way excel saves boolean values.
     range: boolean
     examples:
       - value: False
