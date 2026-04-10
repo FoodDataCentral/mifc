@@ -1,8 +1,11 @@
 <a href="https://github.com/dalito/linkml-project-copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json" alt="Copier Badge" style="max-width:100%;"/></a>
 
-# mifc
+# MIFC
 
-The Minimum Information (about any) Food Composition (MIFC), data standard.
+## Introduction
+
+Welcome to the USDA [Food DataCentral (FDC)](https://fdc.nal.usda.gov/) **M**inimum **I**nformation (about any) **F**ood **C**omposition (**MIFC**) GitHub repository. The USDA FDC MIFC is a Minimum Information Standard (MIS), serving as a standardized reporting framework to structure food composition data. MIFC defines a set of reporting requirements, a "checklist" of required, recommended, and optional data attributes in a precisely specified reporting format. The MIFC data model is implemented in the [Linked Modeling Language (LinkML)](https://linkml.io/).
+
 
 ## Documentation Website
 
@@ -31,3 +34,12 @@ They are written for the command runner [just](https://github.com/casey/just/). 
 ## Credits
 
 This project uses the template [linkml-project-copier](https://github.com/dalito/linkml-project-copier) published as [doi:10.5281/zenodo.15163584](https://doi.org/10.5281/zenodo.15163584).
+
+
+## Scholarly Publication
+
+* [Call to Action: A Need for Community-Driven Minimum Information Standards for Food Composition Data](https://doi.org/10.1016/j.ajcnut.2025.06.027), The American Journal of Clinical Nutrition, 2025-07, DOI: 10.1016/j.ajcnut.2025.06.027.
+
+## Contact
+
+For inquiries about this website any of it's content see https://fdc.nal.usda.gov/contact.
