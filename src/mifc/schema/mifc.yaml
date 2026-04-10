@@ -3,7 +3,7 @@ id: https://w3id.org/FoodDataCentral/mifc
 name: mifc
 title: mifc
 description: |-
-  The Minimum Information (about any) Food Composition (MIFC) data standard.
+  The USDA Food DataCentral Minimum Information (about any) Food Composition (MIFC) data standard.
 license: CC0
 see_also:
   - https://FoodDataCentral.github.io/mifc
