@@ -420,7 +420,12 @@
 <tr>
 <td>ambient</td>
 <td>None</td>
-<td>Typically defined as between 20-25 degrees Celsius</td>
+<td>Defined as between 15-30 degrees Celsius</td>
+</tr>
+<tr>
+<td>room temperature</td>
+<td>None</td>
+<td>Defined as between 15-25 degrees Celsius</td>
 </tr>
 <tr>
 <td>chilled</td>
@@ -445,7 +450,7 @@
 <tr>
 <td>uncontrolled</td>
 <td>None</td>
-<td>Storage conditions which not temperature is not controlled and which may be s...</td>
+<td>Storage conditions in which temperature is not controlled and which may be su...</td>
 </tr>
 </tbody>
 </table>
@@ -478,7 +483,14 @@ rank: 1000
 permissible_values:
   ambient:
     text: ambient
-    description: Typically defined as between 20-25 degrees Celsius.
+    description: Defined as between 15-30 degrees Celsius.
+    comments:
+    - Definition source https://www.gmp-compliance.org/gmp-news/what-are-the-regulatory-definitions-for-ambient-room-temperature-and-cold-chain
+  room temperature:
+    text: room temperature
+    description: Defined as between 15-25 degrees Celsius.
+    comments:
+    - Definition source https://www.gmp-compliance.org/gmp-news/what-are-the-regulatory-definitions-for-ambient-room-temperature-and-cold-chain
   chilled:
     text: chilled
   foodsafe chilled:
@@ -489,7 +501,7 @@ permissible_values:
     text: refrigerated
   uncontrolled:
     text: uncontrolled
-    description: Storage conditions which not temperature is not controlled and which
+    description: Storage conditions in which temperature is not controlled and which
       may be subject to deviations from an ambient temperature range.
 
 </code></pre>
