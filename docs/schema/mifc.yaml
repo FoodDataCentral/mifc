@@ -468,7 +468,14 @@ enums:
     permissible_values:
       ambient:
         text: ambient
-        description: Typically defined as between 20-25 degrees Celsius.
+        description: Defined as between 15-30 degrees Celsius.
+        comments:
+        - Definition source https://www.gmp-compliance.org/gmp-news/what-are-the-regulatory-definitions-for-ambient-room-temperature-and-cold-chain
+      room temperature:
+        text: room temperature
+        description: Defined as between 15-25 degrees Celsius.
+        comments:
+        - Definition source https://www.gmp-compliance.org/gmp-news/what-are-the-regulatory-definitions-for-ambient-room-temperature-and-cold-chain
       chilled:
         text: chilled
       foodsafe chilled:
@@ -479,7 +486,7 @@ enums:
         text: refrigerated
       uncontrolled:
         text: uncontrolled
-        description: Storage conditions which not temperature is not controlled and
+        description: Storage conditions in which temperature is not controlled and
           which may be subject to deviations from an ambient temperature range.
   FoodRipenessState:
     name: FoodRipenessState
@@ -2953,7 +2960,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-04-10T17:33:44'
-source_file_size: 49021
-generation_date: '2026-04-10T17:34:35'
+source_file_date: '2026-05-08T13:44:46'
+source_file_size: 49437
+generation_date: '2026-05-08T13:46:57'
 
