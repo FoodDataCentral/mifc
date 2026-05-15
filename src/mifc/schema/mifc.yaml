@@ -297,7 +297,7 @@ slots:
     examples:
       - value: unripe
   food_cooking_method:
-    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis.
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing any cooking method(s) applied to a food sample prior to analysis.
     recommended: true
     range: FoodCookingMethod
     multivalued: true
