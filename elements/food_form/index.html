@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/food_cooking_method/">
+        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/food_form/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: food_cooking_method - mifc</title>
+        <title>Slot: food_form - mifc</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-food_cooking_method" class="md-skip">
+        <a href="#slot-food_form" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: food_cooking_method
+              Slot: food_form
             
           </span>
         </div>
@@ -427,10 +427,10 @@
   
 
 
-<h1 id="slot-food_cooking_method">Slot: food_cooking_method</h1>
-<p><em>One or multiple values from an enumerated set of controlled vocabulary terms representing any cooking method(s) applied to a food sample prior to analysis.</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/food_cooking_method">mifc:food_cooking_method</a>
-Alias: food_cooking_method</p>
+<h1 id="slot-food_form">Slot: food_form</h1>
+<p><em>One or multiple values from an enumerated set of controlled vocabulary terms representing the internal structure and external appearance of a food sample prior to analysis.</em></p>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/food_form">mifc:food_form</a>
+Alias: food_form</p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -453,7 +453,7 @@ Alias: food_cooking_method</p>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../FoodCookingMethod/">FoodCookingMethod</a></p>
+<p>Range: <a href="../FoodForm/">FoodForm</a></p>
 </li>
 <li>
 <p>Multivalued: True</p>
@@ -471,7 +471,7 @@ Alias: food_cooking_method</p>
 </thead>
 <tbody>
 <tr>
-<td>[boiled</td>
+<td>semi-solid</td>
 </tr>
 </tbody>
 </table>
@@ -491,30 +491,31 @@ Alias: food_cooking_method</p>
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:food_cooking_method</td>
+<td>mifc:food_form</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:food_cooking_method</td>
+<td>mifc:food_form</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: food_cooking_method
+<pre><code class="language-yaml">name: food_form
 description: One or multiple values from an enumerated set of controlled vocabulary
-  terms representing any cooking method(s) applied to a food sample prior to analysis.
+  terms representing the internal structure and external appearance of a food sample
+  prior to analysis.
 examples:
-- value: '[boiled|steamed]'
+- value: semi-solid
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/FoodDataCentral/mifc
 rank: 1000
-alias: food_cooking_method
+alias: food_form
 domain_of:
 - Food
-range: FoodCookingMethod
+range: FoodForm
 recommended: true
 multivalued: true
 
