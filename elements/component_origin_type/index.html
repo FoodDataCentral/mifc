@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_derivation_comment/">
+        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_origin_type/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: component_derivation_comment - mifc</title>
+        <title>Slot: component_origin_type - mifc</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-component_derivation_comment" class="md-skip">
+        <a href="#slot-component_origin_type" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: component_derivation_comment
+              Slot: component_origin_type
             
           </span>
         </div>
@@ -427,10 +427,10 @@
   
 
 
-<h1 id="slot-component_derivation_comment">Slot: component_derivation_comment</h1>
-<p><em>A string providing a detailed description of the procedure, and or calculation steps used in the component_derivation_type.</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_derivation_comment">mifc:component_derivation_comment</a>
-Alias: component_derivation_comment</p>
+<h1 id="slot-component_origin_type">Slot: component_origin_type</h1>
+<p><em>A controlled vocabulary term denoting if the analysis of a component was original to this this food composition resource, or if the value was taken from an external source.</em></p>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_origin_type">mifc:component_origin_type</a>
+Alias: component_origin_type</p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -453,7 +453,7 @@ Alias: component_derivation_comment</p>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../String/">String</a></p>
+<p>Range: <a href="../ComponentOriginType/">ComponentOriginType</a></p>
 </li>
 <li>
 <p>Recommended: True</p>
@@ -468,7 +468,7 @@ Alias: component_derivation_comment</p>
 </thead>
 <tbody>
 <tr>
-<td>Calculated from different food; From average values for food category; Ash; Retention factors not used</td>
+<td>Original</td>
 </tr>
 </tbody>
 </table>
@@ -488,31 +488,31 @@ Alias: component_derivation_comment</p>
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:component_derivation_comment</td>
+<td>mifc:component_origin_type</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:component_derivation_comment</td>
+<td>mifc:component_origin_type</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: component_derivation_comment
-description: A string providing a detailed description of the procedure, and or calculation
-  steps used in the component_derivation_type.
+<pre><code class="language-yaml">name: component_origin_type
+description: A controlled vocabulary term denoting if the analysis of a component
+  was original to this this food composition resource, or if the value was taken from
+  an external source.
 examples:
-- value: Calculated from different food; From average values for food category; Ash;
-    Retention factors not used
+- value: Original
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/FoodDataCentral/mifc
 rank: 1000
-alias: component_derivation_comment
+alias: component_origin_type
 domain_of:
 - Component
-range: string
+range: ComponentOriginType
 recommended: true
 
 </code></pre>

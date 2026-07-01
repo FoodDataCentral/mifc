@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_derivation_comment/">
+        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/ComponentOriginType/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: component_derivation_comment - mifc</title>
+        <title>Enum: ComponentOriginType - mifc</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-component_derivation_comment" class="md-skip">
+        <a href="#enum-componentorigintype" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: component_derivation_comment
+              Enum: ComponentOriginType
             
           </span>
         </div>
@@ -325,10 +325,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
+  <a href="#permissible-values" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applicable Classes
+        Permissible Values
       
     </span>
   </a>
@@ -336,21 +336,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
+  <a href="#slots" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Properties
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
+        Slots
       
     </span>
   </a>
@@ -386,17 +375,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mappings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mappings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#linkml-source" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -427,48 +405,42 @@
   
 
 
-<h1 id="slot-component_derivation_comment">Slot: component_derivation_comment</h1>
-<p><em>A string providing a detailed description of the procedure, and or calculation steps used in the component_derivation_type.</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_derivation_comment">mifc:component_derivation_comment</a>
-Alias: component_derivation_comment</p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-componentorigintype">Enum: ComponentOriginType</h1>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/ComponentOriginType">mifc:ComponentOriginType</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Original</td>
+<td>None</td>
+<td>Component values derived from an original chemical and or physical analyses o...</td>
+</tr>
+<tr>
+<td>Non-original</td>
+<td>None</td>
+<td>Component values derived from a chemical or physical analyses of a food that ...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Description</th>
-<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Component/">Component</a></td>
-<td>Metadata about components of nutritional interest measured from foods</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>
-<p>Range: <a href="../String/">String</a></p>
-</li>
-<li>
-<p>Recommended: True</p>
-</li>
-</ul>
-<h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Calculated from different food; From average values for food category; Ash; Retention factors not used</td>
+<td><a href="../component_origin_type/">component_origin_type</a></td>
+<td>A controlled vocabulary term denoting if the analysis of a component was orig...</td>
 </tr>
 </tbody>
 </table>
@@ -477,43 +449,22 @@ Alias: component_derivation_comment</p>
 <ul>
 <li>from schema: https://w3id.org/FoodDataCentral/mifc</li>
 </ul>
-<h2 id="mappings">Mappings</h2>
-<table>
-<thead>
-<tr>
-<th>Mapping Type</th>
-<th>Mapped Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>self</td>
-<td>mifc:component_derivation_comment</td>
-</tr>
-<tr>
-<td>native</td>
-<td>mifc:component_derivation_comment</td>
-</tr>
-</tbody>
-</table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: component_derivation_comment
-description: A string providing a detailed description of the procedure, and or calculation
-  steps used in the component_derivation_type.
-examples:
-- value: Calculated from different food; From average values for food category; Ash;
-    Retention factors not used
-in_subset:
-- RecommendedSubset
+<pre><code class="language-yaml">name: ComponentOriginType
 from_schema: https://w3id.org/FoodDataCentral/mifc
 rank: 1000
-alias: component_derivation_comment
-domain_of:
-- Component
-range: string
-recommended: true
+permissible_values:
+  Original:
+    text: Original
+    description: Component values derived from an original chemical and or physical
+      analyses of a food.
+  Non-original:
+    text: Non-original
+    description: Component values derived from a chemical or physical analyses of
+      a food that are sourced from another resource such as a different food composition
+      database, food composition table, literature, or unpublished laboratory results.
 
 </code></pre>
 

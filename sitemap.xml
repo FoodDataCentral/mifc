@@ -25,6 +25,10 @@
          <lastmod>2026-07-01</lastmod>
     </url>
     <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/ComponentOriginType/</loc>
+         <lastmod>2026-07-01</lastmod>
+    </url>
+    <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/CompoundAnalyticalMeasurementMethod/</loc>
          <lastmod>2026-07-01</lastmod>
     </url>
@@ -222,6 +226,14 @@
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/component_method_detection_limit/</loc>
+         <lastmod>2026-07-01</lastmod>
+    </url>
+    <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/component_origin_source/</loc>
+         <lastmod>2026-07-01</lastmod>
+    </url>
+    <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/component_origin_type/</loc>
          <lastmod>2026-07-01</lastmod>
     </url>
     <url>

@@ -445,6 +445,21 @@ enums:
         text: Unknown
         description: Component values for which the component_derivation_type is not
           known.
+  ComponentOriginType:
+    name: ComponentOriginType
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/ComponentOriginType
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    permissible_values:
+      Original:
+        text: Original
+        description: Component values derived from an original chemical and or physical
+          analyses of a food.
+      Non-original:
+        text: Non-original
+        description: Component values derived from a chemical or physical analyses
+          of a food that are sourced from another resource such as a different food
+          composition database, food composition table, literature, or unpublished
+          laboratory results.
   FoodPreservationState:
     name: FoodPreservationState
     definition_uri: https://w3id.org/FoodDataCentral/mifc/FoodPreservationState
@@ -2469,6 +2484,35 @@ slots:
     domain_of:
     - Component
     range: string
+    recommended: true
+  component_origin_type:
+    name: component_origin_type
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_origin_type
+    description: A controlled vocabulary term denoting if the analysis of a component
+      was original to this this food composition resource, or if the value was taken
+      from an external source.
+    examples:
+    - value: Original
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_origin_type
+    owner: Component
+    domain_of:
+    - Component
+    range: ComponentOriginType
+    recommended: true
+  component_origin_source:
+    name: component_origin_source
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_origin_source
+    description: A string providing the source(s) of any non-original component analysis.
+    comments:
+    - A DOI link or persistent web identifier should be provided if possible.
+    examples:
+    - value: USDA National Nutrient Database for Standard Reference, Legacy (2018)
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_origin_source
+    range: string
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_limit_of_quantitation
@@ -2982,6 +3026,7 @@ classes:
     - component_comment
     - component_derivation_type
     - component_derivation_comment
+    - component_origin_type
     - component_limit_of_quantitation
     - component_limit_of_blank
     - component_limit_of_detection
@@ -3048,7 +3093,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-07-01T09:46:54'
-source_file_size: 51286
-generation_date: '2026-07-01T09:47:03'
+source_file_date: '2026-07-01T10:19:43'
+source_file_size: 52110
+generation_date: '2026-07-01T10:19:51'
 
