@@ -125,6 +125,7 @@ classes:
       - component_analysis_organization
       - component_comment
       - component_derivation_type
+      - component_derivation_comment
       - component_limit_of_quantitation
       - component_limit_of_blank
       - component_limit_of_detection
@@ -605,6 +606,12 @@ slots:
       - RecommendedSubset
     examples:
       - value: Analytical
+  component_derivation_comment:
+    description: A string providing a detailed description of the procedure, and or calculation steps used in the component_derivation_type.
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: Calculated from different food; From average values for food category; Ash; Retention factors not used
   component_limit_of_quantitation:
     range: string
     description: A string representing the the level above which quantitative results may be determined with acceptable accuracy and precision. Limit of quantitation (or quantification) (LOQ) is variously defined but must be a value greater than the Method Detection Limit (MDL) and should apply to the complete analytical method.
