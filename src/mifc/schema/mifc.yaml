@@ -126,6 +126,7 @@ classes:
       - component_comment
       - component_derivation_type
       - component_derivation_comment
+      - component_origin_type
       - component_limit_of_quantitation
       - component_limit_of_blank
       - component_limit_of_detection
@@ -598,7 +599,7 @@ slots:
     description: A string representing a comment relating to an analyzed component of nutritional interest.
     examples:
       - value: Samples were obtained from 12 retail stores using a probability-based sampling plan. Some fish had been treated during processing to retain moisture on thawing. Untreated fish = 265 mg sodium/100g.
-  component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
+  component_derivation_type:
     description: A controlled vocabulary term denoting how a component of nutritional interest was generated.
     recommended: true
     range: ComponentDerivationType
@@ -608,10 +609,19 @@ slots:
       - value: Analytical
   component_derivation_comment:
     description: A string providing a detailed description of the procedure, and or calculation steps used in the component_derivation_type.
+    recommended: true
     in_subset:
       - RecommendedSubset
     examples:
       - value: Calculated from different food; From average values for food category; Ash; Retention factors not used
+  component_origin_type:
+    description: A controlled vocabulary term denoting if the analysis of a component was original to this this food composition resource, or if the value was taken from an external source.
+    range: ComponentOriginType
+    recommended: true
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: Original
   component_limit_of_quantitation:
     range: string
     description: A string representing the the level above which quantitative results may be determined with acceptable accuracy and precision. Limit of quantitation (or quantification) (LOQ) is variously defined but must be a value greater than the Method Detection Limit (MDL) and should apply to the complete analytical method.
