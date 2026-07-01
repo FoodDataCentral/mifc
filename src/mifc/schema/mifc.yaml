@@ -622,6 +622,11 @@ slots:
       - RecommendedSubset
     examples:
       - value: Original
+  component_origin_source:
+     description: A string providing the source(s) of any non-original component analysis.
+     comments: "A DOI link or persistent web identifier should be provided if possible."
+     examples:
+       - value: USDA National Nutrient Database for Standard Reference, Legacy (2018)
   component_limit_of_quantitation:
     range: string
     description: A string representing the the level above which quantitative results may be determined with acceptable accuracy and precision. Limit of quantitation (or quantification) (LOQ) is variously defined but must be a value greater than the Method Detection Limit (MDL) and should apply to the complete analytical method.
