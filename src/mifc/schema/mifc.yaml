@@ -600,7 +600,7 @@ slots:
   component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how a component of nutritional interest was generated.
     recommended: true
-    notes: Should make an enumeration with appropriate values (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature etc)
+    range: ComponentDerivationType
     in_subset:
       - RecommendedSubset
     examples:
@@ -813,6 +813,20 @@ enums:
         description: Microbiological assay
       Microfluorometric:
       Polarimetric:
+  ComponentDerivationType:
+    permissible_values:
+      Analytical:
+        description: Component values derived from an analytical chemical and or physical analyses of a food, including values derived from original analytical analyses that may involve a calculation step involving retention factors and or yield factors.
+      Imputed:
+        description: Component values derived from an imputation process.
+      Label data:
+        description: Component values sourced from a nutrition facts panel, or values back-calculated from a nutrition facts panel and or label claim.
+      Presumed:
+        description: Component values presumed to be at a certain level based on a value from an existing standard.
+      Recipe calculated:
+        description: Component values from multi-ingredient foods derived from calculations based on the contents of the ingredients in recipes, which may include the use of retention factors.
+      Unknown:
+        description: Component values for which the component_derivation_type is not known.
   FoodPreservationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
     permissible_values:
       air-dried:
