@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_derivation_type/">
+        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_derivation_comment/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: component_derivation_type - mifc</title>
+        <title>Slot: component_derivation_comment - mifc</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-component_derivation_type" class="md-skip">
+        <a href="#slot-component_derivation_comment" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: component_derivation_type
+              Slot: component_derivation_comment
             
           </span>
         </div>
@@ -427,10 +427,10 @@
   
 
 
-<h1 id="slot-component_derivation_type">Slot: component_derivation_type</h1>
-<p><em>A controlled vocabulary term denoting how a component of nutritional interest was generated.</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_derivation_type">mifc:component_derivation_type</a>
-Alias: component_derivation_type</p>
+<h1 id="slot-component_derivation_comment">Slot: component_derivation_comment</h1>
+<p><em>A string providing a detailed description of the procedure, and or calculation steps used in the component_derivation_type.</em></p>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_derivation_comment">mifc:component_derivation_comment</a>
+Alias: component_derivation_comment</p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -452,12 +452,7 @@ Alias: component_derivation_type</p>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../ComponentDerivationType/">ComponentDerivationType</a></p>
-</li>
-<li>
-<p>Recommended: True</p>
-</li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -468,7 +463,7 @@ Alias: component_derivation_type</p>
 </thead>
 <tbody>
 <tr>
-<td>Analytical</td>
+<td>Calculated from different food; From average values for food category; Ash; Retention factors not used</td>
 </tr>
 </tbody>
 </table>
@@ -488,31 +483,31 @@ Alias: component_derivation_type</p>
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:component_derivation_type</td>
+<td>mifc:component_derivation_comment</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:component_derivation_type</td>
+<td>mifc:component_derivation_comment</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: component_derivation_type
-description: A controlled vocabulary term denoting how a component of nutritional
-  interest was generated.
+<pre><code class="language-yaml">name: component_derivation_comment
+description: A string providing a detailed description of the procedure, and or calculation
+  steps used in the component_derivation_type.
 examples:
-- value: Analytical
+- value: Calculated from different food; From average values for food category; Ash;
+    Retention factors not used
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/FoodDataCentral/mifc
 rank: 1000
-alias: component_derivation_type
+alias: component_derivation_comment
 domain_of:
 - Component
-range: ComponentDerivationType
-recommended: true
+range: string
 
 </code></pre>
 

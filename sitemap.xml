@@ -21,6 +21,10 @@
          <lastmod>2026-07-01</lastmod>
     </url>
     <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/ComponentDerivationType/</loc>
+         <lastmod>2026-07-01</lastmod>
+    </url>
+    <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/CompoundAnalyticalMeasurementMethod/</loc>
          <lastmod>2026-07-01</lastmod>
     </url>
@@ -182,6 +186,10 @@
     </url>
     <url>
          <loc>https://FoodDataCentral.github.io/mifc/elements/component_data_points_number/</loc>
+         <lastmod>2026-07-01</lastmod>
+    </url>
+    <url>
+         <loc>https://FoodDataCentral.github.io/mifc/elements/component_derivation_comment/</loc>
          <lastmod>2026-07-01</lastmod>
     </url>
     <url>

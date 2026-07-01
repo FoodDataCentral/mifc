@@ -289,7 +289,18 @@
 
       Component : component_data_points_number
 
+      Component : component_derivation_comment
+
       Component : component_derivation_type
+
+
+
+
+
+        Component --&gt; "0..1 _recommended_" ComponentDerivationType : component_derivation_type
+        click ComponentDerivationType href "../ComponentDerivationType/"
+
+
 
       Component : component_description_label
 
@@ -449,8 +460,14 @@
 </tr>
 <tr>
 <td><a href="../component_derivation_type/">component_derivation_type</a></td>
-<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../ComponentDerivationType/">ComponentDerivationType</a></td>
 <td>A controlled vocabulary term denoting how a component of nutritional interest...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_derivation_comment/">component_derivation_comment</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string providing a detailed description of the procedure, and or calculatio...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -631,6 +648,7 @@ slots:
 - component_analysis_organization
 - component_comment
 - component_derivation_type
+- component_derivation_comment
 - component_limit_of_quantitation
 - component_limit_of_blank
 - component_limit_of_detection
@@ -903,9 +921,6 @@ attributes:
     name: component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated.
-    notes:
-    - Should make an enumeration with appropriate values (e.g, Analytical as default,
-      Calculated, inferred/Estimated, Sourced from literature etc)
     examples:
     - value: Analytical
     in_subset:
@@ -916,8 +931,24 @@ attributes:
     owner: Component
     domain_of:
     - Component
-    range: string
+    range: ComponentDerivationType
     recommended: true
+  component_derivation_comment:
+    name: component_derivation_comment
+    description: A string providing a detailed description of the procedure, and or
+      calculation steps used in the component_derivation_type.
+    examples:
+    - value: Calculated from different food; From average values for food category;
+        Ash; Retention factors not used
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_derivation_comment
+    owner: Component
+    domain_of:
+    - Component
+    range: string
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
     description: A string representing the the level above which quantitative results

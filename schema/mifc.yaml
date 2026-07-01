@@ -414,6 +414,37 @@ enums:
         text: Microfluorometric
       Polarimetric:
         text: Polarimetric
+  ComponentDerivationType:
+    name: ComponentDerivationType
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/ComponentDerivationType
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    permissible_values:
+      Analytical:
+        text: Analytical
+        description: Component values derived from an analytical chemical and or physical
+          analyses of a food, including values derived from original analytical analyses
+          that may involve a calculation step involving retention factors and or yield
+          factors.
+      Imputed:
+        text: Imputed
+        description: Component values derived from an imputation process.
+      Label data:
+        text: Label data
+        description: Component values sourced from a nutrition facts panel, or values
+          back-calculated from a nutrition facts panel and or label claim.
+      Presumed:
+        text: Presumed
+        description: Component values presumed to be at a certain level based on a
+          value from an existing standard.
+      Recipe calculated:
+        text: Recipe calculated
+        description: Component values from multi-ingredient foods derived from calculations
+          based on the contents of the ingredients in recipes, which may include the
+          use of retention factors.
+      Unknown:
+        text: Unknown
+        description: Component values for which the component_derivation_type is not
+          known.
   FoodPreservationState:
     name: FoodPreservationState
     definition_uri: https://w3id.org/FoodDataCentral/mifc/FoodPreservationState
@@ -2411,9 +2442,6 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated.
-    notes:
-    - Should make an enumeration with appropriate values (e.g, Analytical as default,
-      Calculated, inferred/Estimated, Sourced from literature etc)
     examples:
     - value: Analytical
     in_subset:
@@ -2423,8 +2451,24 @@ slots:
     owner: Component
     domain_of:
     - Component
-    range: string
+    range: ComponentDerivationType
     recommended: true
+  component_derivation_comment:
+    name: component_derivation_comment
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_derivation_comment
+    description: A string providing a detailed description of the procedure, and or
+      calculation steps used in the component_derivation_type.
+    examples:
+    - value: Calculated from different food; From average values for food category;
+        Ash; Retention factors not used
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_derivation_comment
+    owner: Component
+    domain_of:
+    - Component
+    range: string
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_limit_of_quantitation
@@ -2937,6 +2981,7 @@ classes:
     - component_analysis_organization
     - component_comment
     - component_derivation_type
+    - component_derivation_comment
     - component_limit_of_quantitation
     - component_limit_of_blank
     - component_limit_of_detection
@@ -3003,7 +3048,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-07-01T09:08:01'
-source_file_size: 49981
-generation_date: '2026-07-01T09:08:11'
+source_file_date: '2026-07-01T09:46:54'
+source_file_size: 51286
+generation_date: '2026-07-01T09:47:03'
 
