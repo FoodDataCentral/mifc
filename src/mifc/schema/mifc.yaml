@@ -844,6 +844,12 @@ enums:
         description: Component values from multi-ingredient foods derived from calculations based on the contents of the ingredients in recipes, which may include the use of retention factors.
       Unknown:
         description: Component values for which the component_derivation_type is not known.
+  ComponentOriginType:
+    permissible_values:
+      Original:
+        description: Component values derived from an original chemical and or physical analyses of a food.
+      Non-original:
+        description: Component values derived from a chemical or physical analyses of a food that are sourced from another resource such as a different food composition database, food composition table, literature, or unpublished laboratory results.
   FoodPreservationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
     permissible_values:
       air-dried:
