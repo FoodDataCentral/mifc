@@ -26,14 +26,14 @@ components:
   component_data_points_number: 0
   component_type: COMPONENT:1079
   component_description_label: Fiber, total dietary
-  component_derivation_type: Calculated
+  component_derivation_type: Analytical
 - component_sample_id: FDC:167512
   component_recorded_value: 2.12
   component_measurement_unit: ug/(100.g)
   component_data_points_number: 1
   component_type: COMPONENT:1089
   component_description_label: Iron, Fe
-  component_derivation_type: Estimated
+  component_derivation_type: Imputed
 - component_sample_id: FDC:167513
   component_recorded_value: 4.34
   component_measurement_unit: g/(100.g)
@@ -54,7 +54,7 @@ components:
   component_data_points_number: 0
   component_type: COMPONENT:1062
   component_description_label: Energy (kJ)
-  component_derivation_type: Sourced from literature
+  component_derivation_type: Analytical
 - component_sample_id: FDC:167513
   component_recorded_value: 1.4
   component_measurement_unit: mg/(100.g)
