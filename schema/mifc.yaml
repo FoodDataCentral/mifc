@@ -2512,6 +2512,9 @@ slots:
     - value: USDA National Nutrient Database for Standard Reference, Legacy (2018)
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_origin_source
+    owner: Component
+    domain_of:
+    - Component
     range: string
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
@@ -3027,6 +3030,7 @@ classes:
     - component_derivation_type
     - component_derivation_comment
     - component_origin_type
+    - component_origin_source
     - component_limit_of_quantitation
     - component_limit_of_blank
     - component_limit_of_detection
@@ -3093,7 +3097,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-07-01T10:19:43'
-source_file_size: 52110
-generation_date: '2026-07-01T10:19:51'
+source_file_date: '2026-07-08T14:13:26'
+source_file_size: 52142
+generation_date: '2026-07-08T14:13:40'
 

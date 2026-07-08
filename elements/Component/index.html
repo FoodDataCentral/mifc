@@ -325,6 +325,8 @@
 
       Component : component_method_detection_limit
 
+      Component : component_origin_source
+
       Component : component_origin_type
 
 
@@ -485,6 +487,12 @@
 <td><a href="../component_origin_type/">component_origin_type</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ComponentOriginType/">ComponentOriginType</a></td>
 <td>A controlled vocabulary term denoting if the analysis of a component was orig...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_origin_source/">component_origin_source</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string providing the source(s) of any non-original component analysis</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -667,6 +675,7 @@ slots:
 - component_derivation_type
 - component_derivation_comment
 - component_origin_type
+- component_origin_source
 - component_limit_of_quantitation
 - component_limit_of_blank
 - component_limit_of_detection
@@ -985,6 +994,20 @@ attributes:
     - Component
     range: ComponentOriginType
     recommended: true
+  component_origin_source:
+    name: component_origin_source
+    description: A string providing the source(s) of any non-original component analysis.
+    comments:
+    - A DOI link or persistent web identifier should be provided if possible.
+    examples:
+    - value: USDA National Nutrient Database for Standard Reference, Legacy (2018)
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_origin_source
+    owner: Component
+    domain_of:
+    - Component
+    range: string
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
     description: A string representing the the level above which quantitative results
