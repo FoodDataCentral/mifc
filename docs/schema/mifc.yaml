@@ -414,6 +414,52 @@ enums:
         text: Microfluorometric
       Polarimetric:
         text: Polarimetric
+  ComponentDerivationType:
+    name: ComponentDerivationType
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/ComponentDerivationType
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    permissible_values:
+      Analytical:
+        text: Analytical
+        description: Component values derived from an analytical chemical and or physical
+          analyses of a food, including values derived from original analytical analyses
+          that may involve a calculation step involving retention factors and or yield
+          factors.
+      Imputed:
+        text: Imputed
+        description: Component values derived from an imputation process.
+      Label data:
+        text: Label data
+        description: Component values sourced from a nutrition facts panel, or values
+          back-calculated from a nutrition facts panel and or label claim.
+      Presumed:
+        text: Presumed
+        description: Component values presumed to be at a certain level based on a
+          value from an existing standard.
+      Recipe calculated:
+        text: Recipe calculated
+        description: Component values from multi-ingredient foods derived from calculations
+          based on the contents of the ingredients in recipes, which may include the
+          use of retention factors.
+      Unknown:
+        text: Unknown
+        description: Component values for which the component_derivation_type is not
+          known.
+  ComponentOriginType:
+    name: ComponentOriginType
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/ComponentOriginType
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    permissible_values:
+      Original:
+        text: Original
+        description: Component values derived from an original chemical and or physical
+          analyses of a food.
+      Non-original:
+        text: Non-original
+        description: Component values derived from a chemical or physical analyses
+          of a food that are sourced from another resource such as a different food
+          composition database, food composition table, literature, or unpublished
+          laboratory results.
   FoodPreservationState:
     name: FoodPreservationState
     definition_uri: https://w3id.org/FoodDataCentral/mifc/FoodPreservationState
@@ -2411,9 +2457,6 @@ slots:
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated.
-    notes:
-    - Should make an enumeration with appropriate values (e.g, Analytical as default,
-      Calculated, inferred/Estimated, Sourced from literature etc)
     examples:
     - value: Analytical
     in_subset:
@@ -2423,8 +2466,56 @@ slots:
     owner: Component
     domain_of:
     - Component
+    range: ComponentDerivationType
+    recommended: true
+  component_derivation_comment:
+    name: component_derivation_comment
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_derivation_comment
+    description: A string providing a detailed description of the procedure, and or
+      calculation steps used in the component_derivation_type.
+    examples:
+    - value: Calculated from different food; From average values for food category;
+        Ash; Retention factors not used
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_derivation_comment
+    owner: Component
+    domain_of:
+    - Component
     range: string
     recommended: true
+  component_origin_type:
+    name: component_origin_type
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_origin_type
+    description: A controlled vocabulary term denoting if the analysis of a component
+      was original to this this food composition resource, or if the value was taken
+      from an external source.
+    examples:
+    - value: Original
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_origin_type
+    owner: Component
+    domain_of:
+    - Component
+    range: ComponentOriginType
+    recommended: true
+  component_origin_source:
+    name: component_origin_source
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_origin_source
+    description: A string providing the source(s) of any non-original component analysis.
+    comments:
+    - A DOI link or persistent web identifier should be provided if possible.
+    examples:
+    - value: USDA National Nutrient Database for Standard Reference, Legacy (2018)
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_origin_source
+    owner: Component
+    domain_of:
+    - Component
+    range: string
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_limit_of_quantitation
@@ -2937,6 +3028,9 @@ classes:
     - component_analysis_organization
     - component_comment
     - component_derivation_type
+    - component_derivation_comment
+    - component_origin_type
+    - component_origin_source
     - component_limit_of_quantitation
     - component_limit_of_blank
     - component_limit_of_detection
@@ -3003,7 +3097,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-05-15T12:38:54'
-source_file_size: 49981
-generation_date: '2026-05-15T12:44:46'
+source_file_date: '2026-07-08T16:10:34'
+source_file_size: 52142
+generation_date: '2026-07-08T16:12:31'
 
