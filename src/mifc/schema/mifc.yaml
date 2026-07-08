@@ -127,6 +127,7 @@ classes:
       - component_derivation_type
       - component_derivation_comment
       - component_origin_type
+      - component_origin_source
       - component_limit_of_quantitation
       - component_limit_of_blank
       - component_limit_of_detection
