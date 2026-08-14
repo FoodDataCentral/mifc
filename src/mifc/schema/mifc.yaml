@@ -137,6 +137,7 @@ classes:
       - component_method_detection_limit
       - compound_trace_analysis_boolean
       - component_standard_error
+      - component_degrees_of_freedom
       - compound_sample_aggregation_minimum_value
       - compound_sample_aggregation_maximum_value
       - compound_sample_aggregation_median_value
@@ -685,6 +686,11 @@ slots:
     range: float
     examples:
       - value: 0.074
+  component_degrees_of_freedom:
+    description: An integer representing the degrees of freedom of the recorded value of a component of nutritional interest measured from a food sample.
+    range: integer
+    examples:
+      - value: 7
   compound_sample_aggregation_minimum_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of compound samples.
     range: float
