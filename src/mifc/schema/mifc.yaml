@@ -139,6 +139,7 @@ classes:
       - component_standard_error
       - component_degrees_of_freedom
       - component_confidence_interval_lower_bound
+      - component_confidence_interval_upper_bound
       - compound_sample_aggregation_minimum_value
       - compound_sample_aggregation_maximum_value
       - compound_sample_aggregation_median_value
@@ -697,6 +698,11 @@ slots:
     range: float
     examples:
       - value: 22.021
+  component_confidence_interval_upper_bound:
+    description: A float representing the upper error bound of the recorded value of a component of nutritional interest measured from a food sample.
+    range: float
+    examples:
+      - value: 26.496
   compound_sample_aggregation_minimum_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of compound samples.
     range: float
