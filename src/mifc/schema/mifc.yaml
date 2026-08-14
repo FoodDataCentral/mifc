@@ -102,6 +102,7 @@ classes:
       - food_sample_digested_weight_unit
       - food_refuse_description
       - food_refuse_percentage
+      - food_nutrient_addition
     id_prefixes:
       - mifc
 
@@ -499,6 +500,12 @@ slots:
     range: integer
     examples:
       - value: 32
+  food_nutrient_addition:
+    description: A boolean (or unknown) value representing if a nutrient or components of nutritional interest was added to a food sample as part of food fortification or food enrichment processing step.
+    recommended: true
+    range: BooleanOrUnknown
+    examples:
+      - value: 'TRUE'
 
 
   # Component slots
