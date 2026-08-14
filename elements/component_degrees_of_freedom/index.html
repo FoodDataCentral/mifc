@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_recorded_value/">
+        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_degrees_of_freedom/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: component_recorded_value - mifc</title>
+        <title>Slot: component_degrees_of_freedom - mifc</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-component_recorded_value" class="md-skip">
+        <a href="#slot-component_degrees_of_freedom" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: component_recorded_value
+              Slot: component_degrees_of_freedom
             
           </span>
         </div>
@@ -427,10 +427,10 @@
   
 
 
-<h1 id="slot-component_recorded_value">Slot: component_recorded_value</h1>
-<p><em>A float representing a recorded value of a component of nutritional interest measured from a food sample.</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_recorded_value">mifc:component_recorded_value</a>
-Alias: component_recorded_value</p>
+<h1 id="slot-component_degrees_of_freedom">Slot: component_degrees_of_freedom</h1>
+<p><em>An integer representing the degrees of freedom of the recorded value of a component of nutritional interest measured from a food sample.</em></p>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_degrees_of_freedom">mifc:component_degrees_of_freedom</a>
+Alias: component_degrees_of_freedom</p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -452,12 +452,7 @@ Alias: component_recorded_value</p>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../Float/">Float</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../Integer/">Integer</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -468,7 +463,7 @@ Alias: component_recorded_value</p>
 </thead>
 <tbody>
 <tr>
-<td>0.52</td>
+<td>7</td>
 </tr>
 </tbody>
 </table>
@@ -488,33 +483,28 @@ Alias: component_recorded_value</p>
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:component_recorded_value</td>
+<td>mifc:component_degrees_of_freedom</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:component_recorded_value</td>
+<td>mifc:component_degrees_of_freedom</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: component_recorded_value
-description: A float representing a recorded value of a component of nutritional interest
-  measured from a food sample.
+<pre><code class="language-yaml">name: component_degrees_of_freedom
+description: An integer representing the degrees of freedom of the recorded value
+  of a component of nutritional interest measured from a food sample.
 examples:
-- value: '0.52'
-in_subset:
-- RequiredSubset
-- RecommendedSubset
+- value: '7'
 from_schema: https://w3id.org/FoodDataCentral/mifc
 rank: 1000
-alias: component_recorded_value
+alias: component_degrees_of_freedom
 domain_of:
 - Component
-range: float
-required: true
-recommended: true
+range: integer
 
 </code></pre>
 

@@ -287,7 +287,13 @@
 
       Component : component_comment
 
+      Component : component_confidence_interval_lower_bound
+
+      Component : component_confidence_interval_upper_bound
+
       Component : component_data_points_number
+
+      Component : component_degrees_of_freedom
 
       Component : component_derivation_comment
 
@@ -347,6 +353,8 @@
       Component : component_recorded_value
 
       Component : component_sample_id
+
+      Component : component_standard_error
 
       Component : component_type
 
@@ -526,6 +534,30 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../component_standard_error/">component_standard_error</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the standard error of the recorded value of a component ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_degrees_of_freedom/">component_degrees_of_freedom</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>An integer representing the degrees of freedom of the recorded value of a com...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_confidence_interval_lower_bound/">component_confidence_interval_lower_bound</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the lower error bound of the recorded value of a compone...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_confidence_interval_upper_bound/">component_confidence_interval_upper_bound</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the upper error bound of the recorded value of a compone...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../compound_sample_aggregation_minimum_value/">compound_sample_aggregation_minimum_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing the minimum measured compound value of an aggregation of...</td>
@@ -681,6 +713,10 @@ slots:
 - component_limit_of_detection
 - component_method_detection_limit
 - compound_trace_analysis_boolean
+- component_standard_error
+- component_degrees_of_freedom
+- component_confidence_interval_lower_bound
+- component_confidence_interval_upper_bound
 - compound_sample_aggregation_minimum_value
 - compound_sample_aggregation_maximum_value
 - compound_sample_aggregation_median_value
@@ -817,7 +853,7 @@ attributes:
   component_recorded_value:
     name: component_recorded_value
     description: A float representing a recorded value of a component of nutritional
-      interest measured from a laboratory sample derived from a food sample.
+      interest measured from a food sample.
     examples:
     - value: '0.52'
     in_subset:
@@ -1095,6 +1131,58 @@ attributes:
     domain_of:
     - Component
     range: boolean
+  component_standard_error:
+    name: component_standard_error
+    description: A float representing the standard error of the recorded value of
+      a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '0.074'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_standard_error
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_degrees_of_freedom:
+    name: component_degrees_of_freedom
+    description: An integer representing the degrees of freedom of the recorded value
+      of a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '7'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_degrees_of_freedom
+    owner: Component
+    domain_of:
+    - Component
+    range: integer
+  component_confidence_interval_lower_bound:
+    name: component_confidence_interval_lower_bound
+    description: A float representing the lower error bound of the recorded value
+      of a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '22.021'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_confidence_interval_lower_bound
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_confidence_interval_upper_bound:
+    name: component_confidence_interval_upper_bound
+    description: A float representing the upper error bound of the recorded value
+      of a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '26.496'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_confidence_interval_upper_bound
+    owner: Component
+    domain_of:
+    - Component
+    range: float
   compound_sample_aggregation_minimum_value:
     name: compound_sample_aggregation_minimum_value
     description: A float representing the minimum measured compound value of an aggregation

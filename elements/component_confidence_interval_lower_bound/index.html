@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_recorded_value/">
+        <link rel="canonical" href="https://FoodDataCentral.github.io/mifc/elements/component_confidence_interval_lower_bound/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: component_recorded_value - mifc</title>
+        <title>Slot: component_confidence_interval_lower_bound - mifc</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-component_recorded_value" class="md-skip">
+        <a href="#slot-component_confidence_interval_lower_bound" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: component_recorded_value
+              Slot: component_confidence_interval_lower_bound
             
           </span>
         </div>
@@ -427,10 +427,10 @@
   
 
 
-<h1 id="slot-component_recorded_value">Slot: component_recorded_value</h1>
-<p><em>A float representing a recorded value of a component of nutritional interest measured from a food sample.</em></p>
-<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_recorded_value">mifc:component_recorded_value</a>
-Alias: component_recorded_value</p>
+<h1 id="slot-component_confidence_interval_lower_bound">Slot: component_confidence_interval_lower_bound</h1>
+<p><em>A float representing the lower error bound of the recorded value of a component of nutritional interest measured from a food sample.</em></p>
+<p>URI: <a href="https://w3id.org/FoodDataCentral/mifc/component_confidence_interval_lower_bound">mifc:component_confidence_interval_lower_bound</a>
+Alias: component_confidence_interval_lower_bound</p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -452,12 +452,7 @@ Alias: component_recorded_value</p>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../Float/">Float</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../Float/">Float</a></li>
 </ul>
 <h2 id="examples">Examples</h2>
 <table>
@@ -468,7 +463,7 @@ Alias: component_recorded_value</p>
 </thead>
 <tbody>
 <tr>
-<td>0.52</td>
+<td>22.021</td>
 </tr>
 </tbody>
 </table>
@@ -488,33 +483,28 @@ Alias: component_recorded_value</p>
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:component_recorded_value</td>
+<td>mifc:component_confidence_interval_lower_bound</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:component_recorded_value</td>
+<td>mifc:component_confidence_interval_lower_bound</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: component_recorded_value
-description: A float representing a recorded value of a component of nutritional interest
-  measured from a food sample.
+<pre><code class="language-yaml">name: component_confidence_interval_lower_bound
+description: A float representing the lower error bound of the recorded value of a
+  component of nutritional interest measured from a food sample.
 examples:
-- value: '0.52'
-in_subset:
-- RequiredSubset
-- RecommendedSubset
+- value: '22.021'
 from_schema: https://w3id.org/FoodDataCentral/mifc
 rank: 1000
-alias: component_recorded_value
+alias: component_confidence_interval_lower_bound
 domain_of:
 - Component
 range: float
-required: true
-recommended: true
 
 </code></pre>
 
