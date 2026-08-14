@@ -100,6 +100,7 @@ classes:
       - food_sample_weight_unit
       - food_sample_digested_weight
       - food_sample_digested_weight_unit
+      - food_refuse_description
     id_prefixes:
       - mifc
 
@@ -486,6 +487,11 @@ slots:
     description: A unit code representing the unit of measurement in which a food_sample_digested_weight is measured.
     examples:
       - value: 'g'
+  food_refuse_description:
+    description: A string representing the description of refuse removed from a food sample prior to analysis of components of nutritional interest.
+    examples:
+      - value: 'Bone and connective tissue'
+
 
   # Component slots
   component_sample_id:
