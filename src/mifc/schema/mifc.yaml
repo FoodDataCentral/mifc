@@ -563,7 +563,7 @@ slots:
       - value: skos:relatedMatch
         description: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.
   component_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
-    description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
+    description: A float representing a recorded value of a component of nutritional interest measured from a food sample.
     required: true
     recommended: true
     range: float
