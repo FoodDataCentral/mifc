@@ -101,6 +101,7 @@ classes:
       - food_sample_digested_weight
       - food_sample_digested_weight_unit
       - food_refuse_description
+      - food_refuse_percentage
     id_prefixes:
       - mifc
 
@@ -489,8 +490,15 @@ slots:
       - value: 'g'
   food_refuse_description:
     description: A string representing the description of refuse removed from a food sample prior to analysis of components of nutritional interest.
+    recommended: true
     examples:
       - value: 'Bone and connective tissue'
+  food_refuse_percentage:
+    description: An integer representing the percentage of refuse removed from a food sample prior to analysis of components of nutritional interest.
+    recommended: true
+    range: integer
+    examples:
+      - value: 32
 
 
   # Component slots
