@@ -1008,6 +1008,11 @@ enums:
         comments:
           - "From the sssom_schema: The subject and the object are associated in some unspecified way."
           - 'Only use if no applicable broad or narrow matches can be found in the vocabulary.'
+  BooleanOrUnknown:
+    permissible_values:
+      TRUE:
+      FALSE:
+      Unknown:
   ResourceMIFCVersionTag:
     permissible_values:
       v1.0.0:
