@@ -136,6 +136,7 @@ classes:
       - component_limit_of_detection
       - component_method_detection_limit
       - compound_trace_analysis_boolean
+      - component_standard_error
       - compound_sample_aggregation_minimum_value
       - compound_sample_aggregation_maximum_value
       - compound_sample_aggregation_median_value
@@ -679,6 +680,11 @@ slots:
     comments: Trace analyses typically refer to analyte concentrations in the range of parts per million, parts per billion or lower.
     examples:
       - value: False
+  component_standard_error:
+    description: A float representing the standard error of the recorded value of a component of nutritional interest measured from a food sample.
+    range: float
+    examples:
+      - value: 0.074
   compound_sample_aggregation_minimum_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of compound samples.
     range: float
