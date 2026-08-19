@@ -102,7 +102,6 @@ classes:
       - food_sample_digested_weight_unit
       - food_refuse_description
       - food_refuse_percentage
-      - food_nutrient_addition
     id_prefixes:
       - mifc
 
@@ -153,6 +152,7 @@ classes:
       - component_atwater_fat_conversion_factor
       - component_atwater_carbohydrate_conversion_factor
       - component_protein_from_nitrogen_conversion_factor
+      - component_nutrient_addition
 
   Resource:
     description: >-
@@ -504,12 +504,6 @@ slots:
     range: integer
     examples:
       - value: 32
-  food_nutrient_addition:
-    description: A boolean (or unknown) value representing if a nutrient or components of nutritional interest was added to a food sample as part of food fortification or food enrichment processing step.
-    recommended: true
-    range: BooleanOrUnknown
-    examples:
-      - value: 'TRUE'
 
 
   # Component slots
@@ -779,6 +773,12 @@ slots:
     examples:
       - value: 6.38
     comments: Also known as Jones' factors. https://www.ars.usda.gov/ARSUserFiles/80400525/Data/Classics/cir183.pdf. A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
+  component_nutrient_addition:
+    description: A boolean (or unknown) value representing if a nutrient or components of nutritional interest was added to a food sample as part of food fortification or food enrichment processing step.
+    recommended: true
+    range: BooleanOrUnknown
+    examples:
+      - value: 'TRUE'
 
   # Resource slots
   resource_dataset_label:
