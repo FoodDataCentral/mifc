@@ -331,6 +331,17 @@
 
       Component : component_method_detection_limit
 
+      Component : component_nutrient_addition
+
+
+
+
+
+        Component --&gt; "0..1 _recommended_" BooleanOrUnknown : component_nutrient_addition
+        click BooleanOrUnknown href "../BooleanOrUnknown/"
+
+
+
       Component : component_origin_source
 
       Component : component_origin_type
@@ -635,6 +646,12 @@
 <td>A float representing the nitrogen to protein conversion factor used to calcul...</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../component_nutrient_addition/">component_nutrient_addition</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../BooleanOrUnknown/">BooleanOrUnknown</a></td>
+<td>A boolean (or unknown) value representing if a nutrient or components of nutr...</td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -730,6 +747,7 @@ slots:
 - component_atwater_fat_conversion_factor
 - component_atwater_carbohydrate_conversion_factor
 - component_protein_from_nitrogen_conversion_factor
+- component_nutrient_addition
 class_uri: schema:Component
 
 </code></pre>
@@ -1387,6 +1405,21 @@ attributes:
     domain_of:
     - Component
     range: float
+  component_nutrient_addition:
+    name: component_nutrient_addition
+    description: A boolean (or unknown) value representing if a nutrient or components
+      of nutritional interest was added to a food sample as part of food fortification
+      or food enrichment processing step.
+    examples:
+    - value: 'TRUE'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    rank: 1000
+    alias: component_nutrient_addition
+    owner: Component
+    domain_of:
+    - Component
+    range: BooleanOrUnknown
+    recommended: true
 class_uri: schema:Component
 
 </code></pre>

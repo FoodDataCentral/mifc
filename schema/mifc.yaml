@@ -2258,21 +2258,6 @@ slots:
     - Food
     range: integer
     recommended: true
-  food_nutrient_addition:
-    name: food_nutrient_addition
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_nutrient_addition
-    description: A boolean (or unknown) value representing if a nutrient or components
-      of nutritional interest was added to a food sample as part of food fortification
-      or food enrichment processing step.
-    examples:
-    - value: 'TRUE'
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    slot_uri: mifc:food_nutrient_addition
-    owner: Food
-    domain_of:
-    - Food
-    range: BooleanOrUnknown
-    recommended: true
   component_sample_id:
     name: component_sample_id
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_sample_id
@@ -2916,6 +2901,21 @@ slots:
     domain_of:
     - Component
     range: float
+  component_nutrient_addition:
+    name: component_nutrient_addition
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_nutrient_addition
+    description: A boolean (or unknown) value representing if a nutrient or components
+      of nutritional interest was added to a food sample as part of food fortification
+      or food enrichment processing step.
+    examples:
+    - value: 'TRUE'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_nutrient_addition
+    owner: Component
+    domain_of:
+    - Component
+    range: BooleanOrUnknown
+    recommended: true
   resource_dataset_label:
     name: resource_dataset_label
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_label
@@ -3113,7 +3113,6 @@ classes:
     - food_sample_digested_weight_unit
     - food_refuse_description
     - food_refuse_percentage
-    - food_nutrient_addition
     class_uri: schema:Food
   Component:
     name: Component
@@ -3165,6 +3164,7 @@ classes:
     - component_atwater_fat_conversion_factor
     - component_atwater_carbohydrate_conversion_factor
     - component_protein_from_nitrogen_conversion_factor
+    - component_nutrient_addition
     class_uri: schema:Component
   Resource:
     name: Resource
@@ -3213,7 +3213,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-08-19T11:01:32'
-source_file_size: 54263
-generation_date: '2026-08-19T11:01:42'
+source_file_date: '2026-08-19T11:14:44'
+source_file_size: 54273
+generation_date: '2026-08-19T11:14:54'
 
