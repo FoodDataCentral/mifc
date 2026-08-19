@@ -1041,8 +1041,8 @@ enums:
           - 'Only use if no applicable broad or narrow matches can be found in the vocabulary.'
   BooleanOrUnknown:
     permissible_values:
-      True: 'TRUE'
-      False: 'FALSE'
+      TRUE: 'TRUE'
+      FALSE: 'FALSE'
       Unknown: 'Unknown'
   ResourceMIFCVersionTag:
     permissible_values:
