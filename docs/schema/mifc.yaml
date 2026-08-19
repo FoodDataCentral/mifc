@@ -737,6 +737,20 @@ enums:
         - 'From the sssom_schema: The subject and the object are associated in some
           unspecified way.'
         - Only use if no applicable broad or narrow matches can be found in the vocabulary.
+  BooleanOrUnknown:
+    name: BooleanOrUnknown
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/BooleanOrUnknown
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    permissible_values:
+      'True':
+        text: 'True'
+        description: 'True'
+      'False':
+        text: 'False'
+        description: 'False'
+      Unknown:
+        text: Unknown
+        description: Unknown
   ResourceMIFCVersionTag:
     name: ResourceMIFCVersionTag
     definition_uri: https://w3id.org/FoodDataCentral/mifc/ResourceMIFCVersionTag
@@ -2216,6 +2230,49 @@ slots:
     domain_of:
     - Food
     range: string
+  food_refuse_description:
+    name: food_refuse_description
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_refuse_description
+    description: A string representing the description of refuse removed from a food
+      sample prior to analysis of components of nutritional interest.
+    examples:
+    - value: Bone and connective tissue
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:food_refuse_description
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    recommended: true
+  food_refuse_percentage:
+    name: food_refuse_percentage
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_refuse_percentage
+    description: An integer representing the percentage of refuse removed from a food
+      sample prior to analysis of components of nutritional interest.
+    examples:
+    - value: '32'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:food_refuse_percentage
+    owner: Food
+    domain_of:
+    - Food
+    range: integer
+    recommended: true
+  food_nutrient_addition:
+    name: food_nutrient_addition
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_nutrient_addition
+    description: A boolean (or unknown) value representing if a nutrient or components
+      of nutritional interest was added to a food sample as part of food fortification
+      or food enrichment processing step.
+    examples:
+    - value: 'TRUE'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:food_nutrient_addition
+    owner: Food
+    domain_of:
+    - Food
+    range: BooleanOrUnknown
+    recommended: true
   component_sample_id:
     name: component_sample_id
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_sample_id
@@ -2326,7 +2383,7 @@ slots:
     name: component_recorded_value
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_recorded_value
     description: A float representing a recorded value of a component of nutritional
-      interest measured from a laboratory sample derived from a food sample.
+      interest measured from a food sample.
     examples:
     - value: '0.52'
     in_subset:
@@ -2603,6 +2660,58 @@ slots:
     domain_of:
     - Component
     range: boolean
+  component_standard_error:
+    name: component_standard_error
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_standard_error
+    description: A float representing the standard error of the recorded value of
+      a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '0.074'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_standard_error
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_degrees_of_freedom:
+    name: component_degrees_of_freedom
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_degrees_of_freedom
+    description: An integer representing the degrees of freedom of the recorded value
+      of a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '7'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_degrees_of_freedom
+    owner: Component
+    domain_of:
+    - Component
+    range: integer
+  component_confidence_interval_lower_bound:
+    name: component_confidence_interval_lower_bound
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_confidence_interval_lower_bound
+    description: A float representing the lower error bound of the recorded value
+      of a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '22.021'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_confidence_interval_lower_bound
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_confidence_interval_upper_bound:
+    name: component_confidence_interval_upper_bound
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_confidence_interval_upper_bound
+    description: A float representing the upper error bound of the recorded value
+      of a component of nutritional interest measured from a food sample.
+    examples:
+    - value: '26.496'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_confidence_interval_upper_bound
+    owner: Component
+    domain_of:
+    - Component
+    range: float
   compound_sample_aggregation_minimum_value:
     name: compound_sample_aggregation_minimum_value
     definition_uri: https://w3id.org/FoodDataCentral/mifc/compound_sample_aggregation_minimum_value
@@ -3002,6 +3111,9 @@ classes:
     - food_sample_weight_unit
     - food_sample_digested_weight
     - food_sample_digested_weight_unit
+    - food_refuse_description
+    - food_refuse_percentage
+    - food_nutrient_addition
     class_uri: schema:Food
   Component:
     name: Component
@@ -3036,6 +3148,10 @@ classes:
     - component_limit_of_detection
     - component_method_detection_limit
     - compound_trace_analysis_boolean
+    - component_standard_error
+    - component_degrees_of_freedom
+    - component_confidence_interval_lower_bound
+    - component_confidence_interval_upper_bound
     - compound_sample_aggregation_minimum_value
     - compound_sample_aggregation_maximum_value
     - compound_sample_aggregation_median_value
@@ -3097,7 +3213,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-07-08T16:10:34'
-source_file_size: 52142
-generation_date: '2026-07-08T16:12:31'
+source_file_date: '2026-08-19T12:43:43'
+source_file_size: 54257
+generation_date: '2026-08-19T12:46:40'
 
