@@ -744,10 +744,13 @@ enums:
     permissible_values:
       'True':
         text: 'True'
+        description: 'True'
       'False':
         text: 'False'
+        description: 'False'
       Unknown:
         text: Unknown
+        description: Unknown
   ResourceMIFCVersionTag:
     name: ResourceMIFCVersionTag
     definition_uri: https://w3id.org/FoodDataCentral/mifc/ResourceMIFCVersionTag
@@ -3210,7 +3213,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-08-14T14:54:14'
-source_file_size: 54238
-generation_date: '2026-08-14T14:54:25'
+source_file_date: '2026-08-19T10:44:44'
+source_file_size: 54257
+generation_date: '2026-08-19T10:44:57'
 
