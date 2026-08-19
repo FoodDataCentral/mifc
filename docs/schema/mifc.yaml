@@ -744,10 +744,10 @@ enums:
     permissible_values:
       'True':
         text: 'True'
-        description: 'True'
+        description: 'TRUE'
       'False':
         text: 'False'
-        description: 'False'
+        description: 'FALSE'
       Unknown:
         text: Unknown
         description: Unknown
@@ -3213,7 +3213,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-08-19T12:43:43'
-source_file_size: 54257
-generation_date: '2026-08-19T12:46:40'
+source_file_date: '2026-08-19T12:54:29'
+source_file_size: 54263
+generation_date: '2026-08-19T12:55:07'
 
