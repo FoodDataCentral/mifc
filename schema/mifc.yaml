@@ -2427,8 +2427,8 @@ slots:
   component_record_date:
     name: component_record_date
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_record_date
-    description: A date value representing recorded date pertaining to an analyzed
-      sample.
+    description: A date value representing the recorded date in which an analyzed
+      sample was recorded or published.
     comments:
     - Allows for ambiguity of date record relative to component_analysis_date. Use
       this if a date for a record is know but it is unclear if it is specifically
@@ -3213,7 +3213,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-08-19T11:14:44'
-source_file_size: 54273
-generation_date: '2026-08-19T11:14:54'
+source_file_date: '2026-08-20T14:52:06'
+source_file_size: 54298
+generation_date: '2026-08-20T14:52:17'
 
