@@ -592,7 +592,7 @@ slots:
     examples:
       - value: 7
   component_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
-    description: A date value representing recorded date pertaining to an analyzed sample.
+    description: A date value representing the recorded date in which an analyzed sample was recorded or published.
     range: date
     comments: Allows for ambiguity of date record relative to component_analysis_date. Use this if a date for a record is know but it is unclear if it is specifically the date of analysis.
     examples:
