@@ -2871,13 +2871,31 @@ slots:
       the available energy of a food when employing the Atwater system or a derivative
       thereof.
     comments:
-    - The Atwater general factor for carbohydrates is of 4. See the USDA Handbook
-      74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
+    - The Atwater general factor for carbohydrates is 4. See the USDA Handbook 74
+      https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
       for the calculation of energy using Atwater specific factors.
     examples:
     - value: '3.84'
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_atwater_carbohydrate_conversion_factor
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_atwater_alcohol_conversion_factor:
+    name: component_atwater_alcohol_conversion_factor
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_atwater_alcohol_conversion_factor
+    description: A float representing the alcohol conversion factor used to calculate
+      the available energy of a food when employing the Atwater system or a derivative
+      thereof.
+    comments:
+    - The Atwater general factor for alcohol is 7 (or 6.9). See the USDA Handbook
+      74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
+      for the calculation of energy using Atwater specific factors.
+    examples:
+    - value: '6.93'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_atwater_alcohol_conversion_factor
     owner: Component
     domain_of:
     - Component
@@ -3163,6 +3181,7 @@ classes:
     - component_atwater_protein_conversion_factor
     - component_atwater_fat_conversion_factor
     - component_atwater_carbohydrate_conversion_factor
+    - component_atwater_alcohol_conversion_factor
     - component_protein_from_nitrogen_conversion_factor
     - component_nutrient_addition
     class_uri: schema:Component
@@ -3213,7 +3232,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-08-20T14:52:06'
-source_file_size: 54298
-generation_date: '2026-08-20T14:52:17'
+source_file_date: '2026-09-01T09:31:58'
+source_file_size: 54862
+generation_date: '2026-09-01T09:32:08'
 
