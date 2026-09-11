@@ -38,6 +38,22 @@ The excel versions of the **MIFC** schema, example data and template are availab
 There are several pre-defined command-recipes available.
 They are written for the command runner [just](https://github.com/casey/just/). To list all pre-defined commands, run `just` or `just --list`.
 
+## Data Validation
+
+* **Prerequisite** [Install LinkML and it's dependencies](https://linkml.io/linkml/intro/install.html)
+
+* Validate Food CSV file:
+
+```
+linkml-validate --schema (PATH TO)/mifc/src/mifc/schema/mifc.yaml --target-class Food (PATH TO)/(Food_File).csv
+```
+
+* Validate Component CSV file:
+
+```
+linkml-validate --schema (PATH TO)/mifc/src/mifc/schema/mifc.yaml --target-class Component (PATH TO)/(Component_File).csv
+```
+
 ## Credits
 
 This project uses the template [linkml-project-copier](https://github.com/dalito/linkml-project-copier) published as [doi:10.5281/zenodo.15163584](https://doi.org/10.5281/zenodo.15163584).
