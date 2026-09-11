@@ -40,7 +40,7 @@ They are written for the command runner [just](https://github.com/casey/just/). 
 
 ## Data Validation
 
-**Prerequisites:** [Install LinkML and it's dependencies](https://linkml.io/linkml/intro/install.html)
+**Prerequisites:** [Install LinkML and its dependencies](https://linkml.io/linkml/intro/install.html)
 
 * Validate Food CSV file:
 
