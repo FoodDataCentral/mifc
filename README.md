@@ -63,6 +63,10 @@ This project uses the template [linkml-project-copier](https://github.com/dalito
 
 * [Call to Action: A Need for Community-Driven Minimum Information Standards for Food Composition Data](https://doi.org/10.1016/j.ajcnut.2025.06.027), The American Journal of Clinical Nutrition, 2025-07, DOI: 10.1016/j.ajcnut.2025.06.027.
 
+## Vulnerability Policy
+
+If vulnerabilities are identified, they will be remedied within 10 days and/or taken down and/or a notification placed on the code warning potential users.
+
 ## Contact
 
 For inquiries about this website any of it's content see https://fdc.nal.usda.gov/contact.
