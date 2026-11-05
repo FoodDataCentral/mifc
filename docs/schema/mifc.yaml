@@ -2258,21 +2258,6 @@ slots:
     - Food
     range: integer
     recommended: true
-  food_nutrient_addition:
-    name: food_nutrient_addition
-    definition_uri: https://w3id.org/FoodDataCentral/mifc/food_nutrient_addition
-    description: A boolean (or unknown) value representing if a nutrient or components
-      of nutritional interest was added to a food sample as part of food fortification
-      or food enrichment processing step.
-    examples:
-    - value: 'TRUE'
-    from_schema: https://w3id.org/FoodDataCentral/mifc
-    slot_uri: mifc:food_nutrient_addition
-    owner: Food
-    domain_of:
-    - Food
-    range: BooleanOrUnknown
-    recommended: true
   component_sample_id:
     name: component_sample_id
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_sample_id
@@ -2442,8 +2427,8 @@ slots:
   component_record_date:
     name: component_record_date
     definition_uri: https://w3id.org/FoodDataCentral/mifc/component_record_date
-    description: A date value representing recorded date pertaining to an analyzed
-      sample.
+    description: A date value representing the recorded date in which an analyzed
+      sample was recorded or published.
     comments:
     - Allows for ambiguity of date record relative to component_analysis_date. Use
       this if a date for a record is know but it is unclear if it is specifically
@@ -2886,13 +2871,31 @@ slots:
       the available energy of a food when employing the Atwater system or a derivative
       thereof.
     comments:
-    - The Atwater general factor for carbohydrates is of 4. See the USDA Handbook
-      74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
+    - The Atwater general factor for carbohydrates is 4. See the USDA Handbook 74
+      https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
       for the calculation of energy using Atwater specific factors.
     examples:
     - value: '3.84'
     from_schema: https://w3id.org/FoodDataCentral/mifc
     slot_uri: mifc:component_atwater_carbohydrate_conversion_factor
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_atwater_alcohol_conversion_factor:
+    name: component_atwater_alcohol_conversion_factor
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_atwater_alcohol_conversion_factor
+    description: A float representing the alcohol conversion factor used to calculate
+      the available energy of a food when employing the Atwater system or a derivative
+      thereof.
+    comments:
+    - The Atwater general factor for alcohol is 7 (or 6.9). See the USDA Handbook
+      74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
+      for the calculation of energy using Atwater specific factors.
+    examples:
+    - value: '6.93'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_atwater_alcohol_conversion_factor
     owner: Component
     domain_of:
     - Component
@@ -2916,6 +2919,21 @@ slots:
     domain_of:
     - Component
     range: float
+  component_nutrient_addition:
+    name: component_nutrient_addition
+    definition_uri: https://w3id.org/FoodDataCentral/mifc/component_nutrient_addition
+    description: A boolean (or unknown) value representing if a nutrient or components
+      of nutritional interest was added to a food sample as part of food fortification
+      or food enrichment processing step.
+    examples:
+    - value: 'TRUE'
+    from_schema: https://w3id.org/FoodDataCentral/mifc
+    slot_uri: mifc:component_nutrient_addition
+    owner: Component
+    domain_of:
+    - Component
+    range: BooleanOrUnknown
+    recommended: true
   resource_dataset_label:
     name: resource_dataset_label
     definition_uri: https://w3id.org/FoodDataCentral/mifc/resource_dataset_label
@@ -3113,7 +3131,6 @@ classes:
     - food_sample_digested_weight_unit
     - food_refuse_description
     - food_refuse_percentage
-    - food_nutrient_addition
     class_uri: schema:Food
   Component:
     name: Component
@@ -3164,7 +3181,9 @@ classes:
     - component_atwater_protein_conversion_factor
     - component_atwater_fat_conversion_factor
     - component_atwater_carbohydrate_conversion_factor
+    - component_atwater_alcohol_conversion_factor
     - component_protein_from_nitrogen_conversion_factor
+    - component_nutrient_addition
     class_uri: schema:Component
   Resource:
     name: Resource
@@ -3213,7 +3232,7 @@ classes:
     tree_root: true
 metamodel_version: 1.7.0
 source_file: mifc.yaml
-source_file_date: '2026-08-19T12:54:29'
-source_file_size: 54263
-generation_date: '2026-08-19T12:55:07'
+source_file_date: '2026-11-04T19:39:29'
+source_file_size: 56168
+generation_date: '2026-11-05T08:54:05'
 
