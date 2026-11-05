@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-11-05T09:43:22
+# Generation date: 2026-11-05T12:27:37
 # Schema: mifc
 #
 # id: https://w3id.org/FoodDataCentral/mifc
